@@ -1,0 +1,77 @@
+body {
+  font-family: Helvetica;
+}
+
+h1 {
+  background-color: #000;
+  color: #f01;
+}
+
+h2 {
+  background-color: #22e8dc;
+  color: rgb(160, 238, 179);
+}
+
+p {
+  color: rgb(34, 182, 66);
+}
+
+a {
+  background-color: yellowgreen;
+  color: pink;
+}
+
+/* La forma correcto en la
+cual enlaces un id es css es
+usando el # */
+
+/* un id se usa cuando se
+tiene un estilo especifico para un 
+solo elemento */
+#contenedor-uno {
+  background-color: #09a;
+}
+
+/* reto al contenedor-dos poner 
+un fondo amarillo */
+
+/* Para poder compartir estilos
+debemos usar clases 'class' */
+
+/* Para poder acceder aun elemento 
+que tiene un class usamos el . */
+.contenedor-principal {
+  background-color: violet;
+  padding: 30px;
+}
+
+.btn-ingresar {
+  background-color: rgb(14, 139, 255);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* sepan que cuando se usas clases se 
+pueden compartir estilos */
+
+.btn-registro {
+  font-size: 25px;
+  background-color: red;
+}
+
+.contenedor-form {
+  /* border que cubra */
+  border: 3px solid rgb(255, 136, 0);
+  border-radius: 8px;
+}
+
+.contenedor-interno-form {
+  padding: 20px;
+}
+
+.titulo-form {
+  color: rgb(14, 139, 255);
+  background-color: #fff;
+}
