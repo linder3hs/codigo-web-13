@@ -24,139 +24,78 @@
       name="twitter:image"
       content="https://media-exp1.licdn.com/dms/image/C4E1BAQEfNIXEf_JoKg/company-background_10000/0?e=2159024400&v=beta&t=PhtZQJ8QA5Wy2lQzlfJL166pSeK_i3q2qfkD-xOMCcc"
     />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
+  <!-- esta etiqueta nos permite escribir css dentro de un html -->
+
   <body>
     <!-- Las etiqueta de titulo h1 - h6 -->
+    <div class="contenedor-principal">
+      <h1>Mi portafolio</h1>
+      <p>
+        Hola mi nombre es Linder Hassinger, soy docente en CodiGo, estoy
+        aprendiendo a programar en HTML, CSS y JS.
+      </p>
+      <img
+        src="./imagenes/profile.jpeg"
+        class="imagen-perfil"
+        alt=""
+        width="200"
+      />
+      <p>
+        <a class="btn-github" href="http://github.com/linder3hs">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+            alt=""
+            width="15"
+          />
+          GitHub
+        </a>
+      </p>
+    </div>
 
-    <h1>Inputs</h1>
+    <!-- Lista en HTML -->
+    <!-- <ol>
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ol> -->
 
-    <a href="./semana1/inputs.html">Link para inputs</a>
+    <ul>
+      <li>
+        <h5>Semana 1</h5>
+        <img
+          src="https://freeiconshop.com/wp-content/uploads/edd/folder-open-flat.png"
+          alt="semana1"
+          width="100"
+        />
+      </li>
+      <li>
+        <h5>Semana 2</h5>
+        <img
+          src="https://freeiconshop.com/wp-content/uploads/edd/folder-open-flat.png"
+          alt="semana1"
+          width="100"
+        />
+      </li>
+    </ul>
 
-    <h1>Formularios</h1>
+    <div>
+      <h3>Temas semana 1</h3>
+      <a class="link-referencia" href="./semana1/inputs.html"
+        >Link para inputs</a
+      >
+      <a class="link-referencia" href="./semana1/form.html"
+        >Link a formularios</a
+      >
+      <a class="link-referencia" href="./semana1/tablas.html">Link a Tablas</a>
+    </div>
 
-    <a href="./semana1/form.html">Link a formularios</a>
-
-    <h1>Tablas</h1>
-
-    <a href="./semana1/tablas.html">Link a Tablas</a>
-
-    <h1>Titulo 1</h1>
-    <h2>Titulo 2</h2>
-    <h3>Titulo 3</h3>
-    <h4>Titulo 4</h4>
-    <h5>Titulo 5</h5>
-    <h6>Titulo 6</h6>
-    <!-- Parrafos -->
-    <p>Hola mi nombre es Linder, estoy construyendo mi pagian web</p>
-
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad sunt totam
-      accusantium aliquam rerum. Cum consequatur assumenda, facere praesentium
-      sit est molestias minus excepturi fugit quia repellendus soluta beatae.
-      Unde?
-    </p>
-
-    <!-- Etiqueta o bold -->
-    <p>
-      Hola mi nombre es
-      <b>Linder Hassinger</b>
-      y soy
-      <strong> Software Developer</strong>
-      <!-- Etiqueta cursiva -->
-      <i>naci en Lima, Peru</i>
-    </p>
-
-    <!-- Subrayado -->
-    <h4>
-      <u>
-        <i>Mis datos</i>
-      </u>
-    </h4>
-
-    <!-- BR: Es para saltos de lines -->
-    <!-- No deben usarla -->
-    <p>
-      Componentes de una computadora:
-      <br />
-      Monitor
-      <br />
-      Teclado
-      <br />
-      Mouse
-    </p>
-
-    <b>Lista de cursos</b>
-
-    <br />
-
-    <i>Curso de HTML, CSS y JS</i>
-
-    <!-- Para poder citar textos -->
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum amet
-      maiores expedita quod maxime illum fugit doloribus quas repellat
-      accusantium eos fugiat cum, impedit error ullam pariatur tempora ea quo.
-    </p>
-    <blockquote>Texto de un escritor que quiere ser citado</blockquote>
-
-    <!-- Hipervinculos -->
-    <p>
-      <a href="https://www.youtube.com/" target="_blank"> Link a youtube </a>
-    </p>
-    <p>
-      <a href="https://www.google.com/" target="_blank"> Link a Google </a>
-    </p>
-
-    <p>
-      <a href="https://www.linkedin.com/">Linkedin</a>
-    </p>
-
-    <!-- TAREA PARA AHORA -->
-    <!-- CREAR 3 PARRAFOS USANDO p -->
-    <!-- CREAR 3 LINKS a google, youtube y su pagina prefereida -->
-
-    <!-- Etiquetas multimedia  -->
-    <!-- Puedo poner el link una imagen -->
-    <img
-      src="https://seeklogo.com/images/D/Dragon_Ball_Z-logo-0C7B78BE7E-seeklogo.com.png"
-      alt="Dragon Ball Z Imagen"
-      width="200"
-      height="200"
-    />
-
-    <!-- Imagen local -->
-    <a href="https://www.youtube.com/" target="_blank">
-      <img src="./imagenes/YouTube-logo.png" width="200" />
-    </a>
-
-    <!-- Video -->
-    <video controls autoplay muted width="400" height="400">
-      <source src="./videos/video.mp4" />
-    </video>
-
-    <audio controls autoplay muted>
-      <source src="./audios/audio.mp3" />
-    </audio>
-
-    <!-- iframe -->
-    <iframe
-      src="./pdfs/git-cheat-sheet-education.pdf"
-      width="500"
-      height="800"
-    ></iframe>
-
-    <!-- <iframe src="./videos/video.mp4" width="500" height="800"></iframe> -->
-
-    <!-- <iframe src="./audios/audio.mp3" frameborder="0"></iframe> -->
-
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/TcMBFSGVi1c"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
+    <div>
+      <h3>Temas semana 2</h3>
+      <a class="link-referencia" href="./semana2/index.html"
+        >Introducción a CSS</a
+      >
+    </div>
   </body>
 </html>

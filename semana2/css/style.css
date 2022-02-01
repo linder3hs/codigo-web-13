@@ -12,10 +12,6 @@ h2 {
   color: rgb(160, 238, 179);
 }
 
-p {
-  color: rgb(34, 182, 66);
-}
-
 a {
   background-color: yellowgreen;
   color: pink;
@@ -69,9 +65,108 @@ pueden compartir estilos */
 
 .contenedor-interno-form {
   padding: 20px;
+  /* left: izquierda */
+  /* center: centro */
+  /* right: derecha */
+  /* esto lo de hace de forma horizontal */
+  text-align: center;
 }
 
 .titulo-form {
   color: rgb(14, 139, 255);
   background-color: #fff;
 }
+
+.input-form {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px #000 solid;
+  width: 400px;
+}
+
+/* retos para el profe 
+quiero que el iput del codigo 
+mida 100px */
+
+.input-codigo {
+  width: 100px;
+}
+
+.input-numero {
+  width: 275px;
+}
+
+/* reto para ustedes denle estilos
+al boton */
+
+.btn-crear-usuario {
+  background-color: rgb(248, 156, 35);
+  color: #000;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* PSEUDOCLASES */
+/* Los elementos tienen propiedades
+internas por ejemplo el hover
+
+hover: es la propiedad que detecta
+cuando el mouse esta sobre el elemento,
+es decir estos estilos se aplicaran
+solo si el mouse esta sobre dicho element */
+
+.btn-crear-usuario:hover {
+  background-color: rgb(105, 218, 111);
+}
+
+.btn-ingresar:hover {
+  background-color: #f01;
+  color: #000;
+  /* quita el subrayado */
+  text-decoration: none;
+  padding: 50px;
+}
+
+/* los elementos como el tienen pseudoclases
+como
+
+link
+visited
+hover
+active */
+
+/* Estas pseudoclases aplican para
+todos elementos de html */
+
+/* div:hover {
+  background-color: #f01;
+} */
+
+.contenedor-interno-form h1 {
+  border: 2px solid #000;
+}
+
+/* first-child */
+/* Busca el primero elemento */
+/* <h1>  </h1> */
+/* <h1>  </h1> */
+/* <h1>  </h1> */
+/* <h1>  </h1> */
+/* <h1>  </h1> */
+
+h1:first-child {
+  color: purple;
+}
+
+input:first-of-type {
+  color: #f01;
+}
+
+h2:nth-child(0) {
+  color: #000;
+}
+/* 
+.contenedor-interno-form p:nth-child(2) {
+  border: 1px #f01 solid;
+} */
