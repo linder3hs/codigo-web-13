@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* rgb */
+/* r : red */
+/* g : green */
+/* b : blue */
+/* hexadecimal */
+/* #000000 => negro */
+/* #ffffff => blanco */
+/* #f01f01 => rojo */
+/* #000 */
+
+body {
+  font-family: "Supermercado One", cursive, sans-serif;
+}
+
+.contenedor-uno {
+  height: 30vh;
+  background-color: hsl(109, 62%, 78%);
+}
+
+.contenedor-form {
+  border: 3px solid #000;
+  height: 100vh;
+  background-color: rgb(232, 232, 65);
+}
+
+input {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  border: 3px solid #64cd87;
+}
+
+article {
+  height: 40vh;
+  background-color: rgba(123, 234, 133, 0.3);
+}

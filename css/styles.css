@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Helvetica;
 }
@@ -17,12 +22,17 @@ body {
 
 .contenedor-principal {
   text-align: center;
+  height: 100vh;
 }
 
 /* .contenedor-principal p {
   font-size: 18px;
   width: 400px;
 } */
+.contenedor-clases {
+  height: 100vh;
+  background-color: rgb(230, 202, 113);
+}
 
 .imagen-perfil {
   border-radius: 50%;
@@ -35,4 +45,9 @@ body {
   padding: 10px;
   color: #000;
   text-decoration: none;
+}
+
+.imagen-programador {
+  border-radius: 12px;
+  margin-top: 40px;
 }
