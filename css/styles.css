@@ -13,6 +13,7 @@ body {
   padding: 10px;
   text-decoration: none;
   border-radius: 5px;
+  margin: 20px;
 }
 
 .link-referencia:hover {
@@ -32,6 +33,29 @@ body {
 .contenedor-clases {
   height: 100vh;
   background-color: rgb(230, 202, 113);
+}
+
+.lista-semanas {
+  margin: 40px;
+  padding: 40px;
+  list-style: none;
+}
+
+h3 {
+  font-size: 3em;
+  margin: 20px;
+}
+
+.divisor {
+  margin: 20px;
+  height: 4px;
+  background-color: #000;
+  border: none;
+  border-radius: 12px;
+}
+
+.lista-semanas li {
+  padding: 20px;
 }
 
 .imagen-perfil {
