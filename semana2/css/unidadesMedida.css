@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+}
+
+.banner {
+  background-color: rgb(255, 183, 49);
+  height: 40vh;
+  width: 50%;
+}
+
+.titulo {
+  font-size: 4em;
+  color: rebeccapurple;
+}
+
+.parrafo {
+  font-size: 50px;
+}
+
+.banner-medio {
+  height: 20vh;
+  background-color: rgb(255, 49, 210);
+  width: 60%;
+}
+
+.banner-dos {
+  background-color: rgb(36, 201, 216);
+  height: 40vh;
+  width: 70%;
+}
+
+.banner-tres {
+  /* 1 -100 => A una pantalla */
+  height: 300vh;
+  background-color: rgb(224, 255, 49);
+  width: 100%;
+}
+
+.banner-cuatro {
+  background-color: rebeccapurple;
+  height: 40vh;
+  /* el tamaño minimo de este banner
+  sera el 50% */
+  min-width: 50%;
+  max-width: 80%;
+}
+
+.banner-cinco {
+  width: 300px;
+  height: 300px;
+  border: 12px solid #f01;
+}
