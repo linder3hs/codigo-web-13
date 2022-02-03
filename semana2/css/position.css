@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: aqua;
+  border: 3px solid #f01;
+  display: block;
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 4px solid #f01;
+}
+
+.section-uno {
+  border: 3px solid rgb(0, 238, 255);
+  position: relative;
+  height: 100vh;
+  top: 130px;
+  /* z-index: -1; */
+  /* left: 100px; */
+  /* right: 100px; */
+}
+
+.titulo-principal {
+  border: 3px solid rgb(60, 255, 0);
+  position: absolute;
+}
+
+.section-dos {
+  border: 2px solid #f01;
+  height: 40vh;
+  position: relative;
+}
+
+.contenedor-uno {
+  position: absolute;
+  /* left: 40%; */
+  bottom: 0;
+}
+
+.contenedor-uno p {
+  display: inline-block;
+}
