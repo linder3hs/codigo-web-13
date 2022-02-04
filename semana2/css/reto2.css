@@ -49,11 +49,12 @@ body {
   width: 40%;
   margin: auto;
   padding-top: 40px;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   font-size: 18px;
 }
 
 .button-pink {
+  margin-top: 40px;
   padding: 30px;
   padding-right: 70px;
   padding-left: 70px;
@@ -122,10 +123,55 @@ body {
 
 .title-sections {
   margin-bottom: 20px;
-  font-size: 2em;
+  font-size: 3em;
   text-transform: capitalize;
+  text-align: left;
+  /* text-align: justify; */
 }
 
 .text-sections {
+  width: 60%;
+  text-align: left;
+}
+
+.section-five {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.section-five div {
   width: 50%;
+  text-align: center;
+}
+
+.background-top-dark {
+  background: url("../../imagenes/reto2/bg-footer-top-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+}
+
+.footer {
+  background-color: hsl(192, 100%, 9%);
+  color: #fff;
+  display: flex;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer div {
+  width: 40%;
+  padding: 30px;
+  border: solid 2px white;
+}
+
+.footer div p {
+  padding: 20px;
+}
+
+.logo-white {
+  filter: brightness(0) invert(1);
 }
