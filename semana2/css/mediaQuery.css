@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: blue;
+}
+
+.section-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: solid;
+  height: 100vh;
+}
+
+.section-principal div {
+  width: 100px;
+  height: 100px;
+}
+
+.box-one {
+  background-color: rgb(148, 153, 84);
+}
+
+.box-two {
+  background-color: rgb(62, 248, 170);
+}
+
+.box-three {
+  background-color: rgb(228, 35, 170);
+}
+
+/* Recuerden que los media query son condiciones
+basada en el tamaño de la pantalla */
+
+/* El tamaño estanadar de laptops, pc, desktops min 1200px */
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: #fff !important;
+  }
+
+  .box-three {
+    background-color: rgb(228, 35, 35);
+  }
+
+  .box-one {
+    background-color: rgb(20, 143, 243) !important;
+  }
+}
+
+/* tablets phones */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: green;
+  }
+}
+
+/* phone pequeños */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: orange;
+  }
+
+  .section-principal {
+    flex-direction: column-reverse;
+  }
+
+  .box-one {
+    background-color: #fff;
+  }
+}
+
+/* laptop 13, ipads tablets > 12 */
+@media only screen and (min-width: 992px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* Esta condicion dice que cuando el ancho minimo de mi 
+pantalla sea 1200 el color de fondo sera rojo*/
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: red;
+  }
+}
