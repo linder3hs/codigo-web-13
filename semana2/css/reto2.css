@@ -89,3 +89,43 @@ body {
   margin-top: 15px;
   color: rgba(0, 0, 0, 0.5);
 }
+
+.background-top {
+  background: url("../../imagenes/reto2/bg-section-top-desktop-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+}
+
+.background-bottom {
+  background: url("../../imagenes/reto2/bg-section-bottom-desktop-1.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+}
+
+.section-four {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50vh;
+  background-color: hsl(207, 100%, 98%);
+}
+
+.section-four div:first-child {
+  width: 50%;
+}
+
+.img-desktop {
+  width: 500px;
+}
+
+.title-sections {
+  margin-bottom: 20px;
+  font-size: 2em;
+  text-transform: capitalize;
+}
+
+.text-sections {
+  width: 50%;
+}
