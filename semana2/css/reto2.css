@@ -206,8 +206,32 @@ body {
 /* Style for resposive design */
 
 @media only screen and (max-width: 480px) {
+  .nav div {
+    padding: 5px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .img-logo {
+    padding-left: 15px;
+  }
+
+  .button-free {
+    margin-right: 15px;
+  }
+
+  .section-one {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   .title {
     font-size: 2em;
+    width: 90%;
+    margin: auto;
   }
 
   .text-normal {
@@ -250,14 +274,15 @@ body {
   }
 
   .background-top {
-    background: url("../../imagenes/reto2/bg-section-top-mobile-1.svg");
+    background: url("../../imagenes/reto2/bg-section-bottom-mobile-1.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
   }
 
   .background-bottom {
-    background: url("../../imagenes/reto2/bg-section-bottom-mobile-1.svg");
+    background: url("../../imagenes/reto2/bg-section-top-mobile-1.svg");
+
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
