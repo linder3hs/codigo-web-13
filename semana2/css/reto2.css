@@ -248,4 +248,34 @@ body {
     width: 100%;
     border: solid;
   }
+
+  .background-top {
+    background: url("../../imagenes/reto2/bg-section-top-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .background-bottom {
+    background: url("../../imagenes/reto2/bg-section-bottom-mobile-1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .background-top-dark {
+    background: url("../../imagenes/reto2/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    height: 80vh;
+  }
+
+  .text-footer {
+    width: 90%;
+  }
 }
