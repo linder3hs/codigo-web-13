@@ -16,6 +16,7 @@ body {
 .row {
   max-width: 800px;
   margin: auto;
+  margin-top: 50px;
 }
 
 .card {
@@ -59,4 +60,21 @@ body {
 .card-button-plus-minus button {
   background-color: transparent;
   border: none;
+}
+
+.card-header-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.card-header div {
+  margin-bottom: 10px;
+}
+
+.text-primary {
+  color: hsl(238, 40%, 52%);
+}
+
+.text-dark {
+  color: hsl(211, 10%, 45%);
 }
