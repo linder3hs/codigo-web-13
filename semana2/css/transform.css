@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  height: 100vh;
+}
+
+.form {
+  border: 2px solid #ccc;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+.form h2 {
+  letter-spacing: 2px;
+  color: rgb(33, 118, 253);
+}
+
+.input-form {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border: solid 2px #ccc;
+  border-radius: 6px;
+}
+
+/* !linear - La misma velocidad desde que empieza hasta que termina */
+/* !ease-in - Empieza lento y acaba rápido */
+/* !ease-out - Empieza rápido y acaba lento */
+/* !ease-in-out - Empieza lento y acaba lento */
+
+.btn-primary {
+  margin-top: 20px;
+  padding: 10px;
+  width: 110%;
+  background-color: rgb(33, 118, 253);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+
+/* **usaremos transform cuando queremos
+*cambiar el estado de una propiedad */
+
+.btn-primary:hover {
+  background-color: rgb(250, 208, 19);
+}
+
+.container-help {
+  transition: ease-in 1s;
+}
+
+.text-help {
+  display: none;
+  max-width: 300px;
+  min-width: 300px;
+  transition: ease-in 1s;
+}
+
+.button-help {
+  border: none;
+  background-color: transparent;
+}
+
+.container-help:hover + .text-help {
+  display: block !important;
+  /* transform: scale(1.3); */
+}

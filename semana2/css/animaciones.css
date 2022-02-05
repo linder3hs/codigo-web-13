@@ -118,7 +118,7 @@ body {
   margin: auto;
   font-size: 24px;
   white-space: nowrap;
-  border-right: 2px solid black;
+  border-right: 10px solid rgb(177, 59, 255);
   transform: translateY(-50%);
   overflow: hidden;
 }
@@ -141,7 +141,7 @@ body {
 
 @keyframes cursor {
   from {
-    border-right-color: black;
+    border-right-color: rgb(255, 77, 196);
   }
   to {
     border-right-color: transparent;
