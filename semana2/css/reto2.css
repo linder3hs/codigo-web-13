@@ -265,27 +265,24 @@ body {
   .title-sections {
     width: 100%;
     font-size: 2em;
-    border: solid;
   }
 
   .text-sections {
     width: 100%;
-    border: solid;
   }
 
   .background-top {
-    background: url("../../imagenes/reto2/bg-section-bottom-mobile-1.svg");
+    background: url("../../imagenes/reto2/bg-section-top-mobile-1.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
   }
 
   .background-bottom {
-    background: url("../../imagenes/reto2/bg-section-top-mobile-1.svg");
-
+    background: url("../../imagenes/reto2/bg-section-bottom-mobile-1.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom;
+    /* background-position: bottom; */
   }
 
   .background-top-dark {
