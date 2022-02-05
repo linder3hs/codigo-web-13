@@ -79,3 +79,19 @@ body {
 .text-dark {
   color: hsl(211, 10%, 45%);
 }
+
+.comment-container {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.flex-grow {
+  flex-grow: 2;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flex-grow textarea {
+  width: 100%;
+}
