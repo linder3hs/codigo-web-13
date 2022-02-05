@@ -43,3 +43,20 @@ body {
 .card-profile span {
   padding-left: 10px;
 }
+
+.card-button-plus-minus {
+  color: hsl(238, 40%, 52%);
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: hsl(223, 19%, 93%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card-button-plus-minus button {
+  background-color: transparent;
+  border: none;
+}
