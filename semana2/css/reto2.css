@@ -202,3 +202,50 @@ body {
   padding-right: 30px;
   font-weight: 550;
 }
+
+/* Style for resposive design */
+
+@media only screen and (max-width: 480px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .text-normal {
+    width: 80%;
+  }
+
+  .img-mockup {
+    width: 400px;
+  }
+
+  .section-three {
+    flex-direction: column;
+  }
+
+  .section-four {
+    flex-direction: column-reverse;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .section-five {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .img-desktop {
+    width: 300px;
+  }
+
+  .title-sections {
+    width: 100%;
+    font-size: 2em;
+    border: solid;
+  }
+
+  .text-sections {
+    width: 100%;
+    border: solid;
+  }
+}
