@@ -39,9 +39,10 @@ body {
 /* CSS IMAGENES */
 .img-yt {
   border: solid;
+  border-radius: 50%;
   width: 300px;
   height: 300px;
-  border-radius: 50%;
+  object-fit: contain;
 }
 
 .img-avatar {
@@ -72,4 +73,12 @@ body {
 
 .img-avatar-6 {
   filter: saturate(300%);
+}
+
+.img-avatar-7 {
+  filter: brightness(0.5);
+}
+
+.img-avatar-8 {
+  filter: opacity(20%);
 }

@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(223, 19%, 93%);
+}
+
+.container {
+  display: flex;
+  justify-items: center;
+}
+
+.row {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-profile {
+  display: flex;
+  align-items: center;
+}
+
+.card-profile img {
+  width: 35px;
+}
+
+.card-profile span {
+  padding-left: 10px;
+}
