@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -94,4 +95,33 @@ body {
 
 .flex-grow textarea {
   width: 100%;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-family: "Rubik", sans-serif;
+  resize: none;
+  padding: 20px;
+  font-size: 16px;
 }
+
+.commment-profile {
+  width: 50px;
+}
+
+.btn-primary {
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
+  /* top - right - bottom - left */
+  padding: 15px 30px;
+}
+
+/* es para indicar que estoy esta carpeta */
+/* ./ */
+
+/* retroceder una carpeta */
+/* cada 2 puntos + / es una caprpeta atras */
+/* ../../../ */
