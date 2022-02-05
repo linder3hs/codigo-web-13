@@ -18,7 +18,7 @@ body {
   border: solid;
 }
 
-@keyframes texto-volador {
+/* @keyframes texto-volador {
   from {
     margin-left: 100%;
     width: 300%;
@@ -38,6 +38,8 @@ body {
   animation-name: image-resize;
   animation-duration: 10s;
   animation-iteration-count: 1;
+  width: 400px;
+  height: 400px;
 }
 
 @keyframes image-resize {
@@ -99,5 +101,49 @@ body {
 
   to {
     transform: translateY(-135px);
+  }
+} */
+
+/* animation-name: texto-animado-dos;
+  animation-duration: 2s;
+  animation-timing-function: steps(144);
+  animation-fill-mode: both;
+  animation-direction: normal;
+  animation-delay: 1s; */
+
+.lineas {
+  position: relative;
+  text-align: center;
+  width: 600px;
+  margin: auto;
+  font-size: 24px;
+  white-space: nowrap;
+  border-right: 2px solid black;
+  transform: translateY(-50%);
+  overflow: hidden;
+}
+
+.texto-animado-dos {
+  animation: texto-animado-dos 5s steps(144) 1s normal both,
+    cursor 0.5s steps(50) infinite normal;
+  animation-iteration-count: infinite;
+}
+
+@keyframes texto-animado-dos {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 600px;
+  }
+}
+
+@keyframes cursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
   }
 }
