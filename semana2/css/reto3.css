@@ -125,3 +125,24 @@ body {
 /* retroceder una carpeta */
 /* cada 2 puntos + / es una caprpeta atras */
 /* ../../../ */
+.line-with-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hr {
+  height: 94%;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #ccc;
+  width: 2px;
+  border: 2px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.5;
+}
