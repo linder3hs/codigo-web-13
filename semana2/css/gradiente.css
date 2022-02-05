@@ -35,3 +35,41 @@ body {
     linear-gradient(150deg, rgb(217, 25, 223), rgb(0, 255, 191) 50%),
     linear-gradient(300deg, rgb(223, 219, 25), rgb(255, 104, 34) 25%);
 }
+
+/* CSS IMAGENES */
+.img-yt {
+  border: solid;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.img-avatar {
+  /* va de 0 - 1 */
+  /* o es casi transparente y 1 es el color normal */
+  opacity: 0.5;
+}
+
+.img-avatar-2 {
+  filter: grayscale(100%);
+}
+
+.img-avatar-3 {
+  filter: blur(5px);
+}
+
+.img-avatar-3 {
+  filter: sepia(100%);
+}
+
+.img-avatar-4 {
+  filter: invert(100%);
+}
+
+.img-avatar-5 {
+  filter: hue-rotate(180deg);
+}
+
+.img-avatar-6 {
+  filter: saturate(300%);
+}
