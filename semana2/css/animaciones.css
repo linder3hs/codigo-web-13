@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* si usamos tablas esto no es lo idea */
+  overflow-x: hidden;
+}
+
+.texto-animado {
+  /* una animacion esta compuesta por un nombre y un tiempo */
+  animation-name: texto-volador;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
+  border: solid;
+}
+
+@keyframes texto-volador {
+  from {
+    margin-left: 100%;
+    width: 300%;
+    background-color: aqua;
+    border: none;
+  }
+
+  to {
+    margin-left: -100%;
+    background-color: brown;
+    color: white;
+    border: none;
+  }
+}
+
+.image-animada {
+  animation-name: image-resize;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes image-resize {
+  from {
+    width: 20px;
+    height: 20px;
+  }
+
+  to {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.box-uno {
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  animation-name: box-animation;
+  animation-duration: 10s;
+}
+
+@keyframes box-animation {
+  0% {
+    background-color: black;
+  }
+
+  25% {
+    background-color: sandybrown;
+  }
+
+  50% {
+    background-color: rgb(34, 0, 128);
+  }
+
+  75% {
+    background-color: blue;
+  }
+
+  100% {
+    background-color: green;
+  }
+}
