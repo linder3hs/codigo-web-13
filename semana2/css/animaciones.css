@@ -14,7 +14,7 @@ body {
   /* una animacion esta compuesta por un nombre y un tiempo */
   animation-name: texto-volador;
   animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-iteration-count: 1;
   border: solid;
 }
 
@@ -37,7 +37,7 @@ body {
 .image-animada {
   animation-name: image-resize;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 @keyframes image-resize {
@@ -79,5 +79,25 @@ body {
 
   100% {
     background-color: green;
+  }
+}
+
+.ball-uno {
+  height: 200px;
+  width: 200px;
+  background-color: rgb(255, 0, 255);
+  border-radius: 50%;
+  animation-name: ball-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ball-animation {
+  from {
+    transform: translateY(0xp);
+  }
+
+  to {
+    transform: translateY(-135px);
   }
 }
