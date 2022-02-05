@@ -4,74 +4,35 @@
 }
 
 body {
-  font-family: Helvetica;
+  font-family: "Heebo", sans-serif;
 }
 
-.link-referencia {
-  background-color: rgb(240, 199, 16);
-  color: #000;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 20px;
+.header {
+  display: flex;
+  /* flex-start
+    center
+    flex-end */
+  justify-content: flex-end;
 }
 
-.link-referencia:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
-.contenedor-principal {
-  text-align: center;
-  height: 100vh;
-}
-
-/* .contenedor-principal p {
-  font-size: 18px;
-  width: 400px;
-} */
-.contenedor-clases {
-  height: 100vh;
-  background-color: rgb(230, 202, 113);
-}
-
-.lista-semanas {
-  margin: 40px;
-  padding: 40px;
+.nav ul {
+  display: flex;
   list-style: none;
 }
 
-h3 {
-  font-size: 3em;
-  margin: 20px;
+.nav ul > li {
+  padding: 15px;
 }
 
-.divisor {
-  margin: 20px;
-  height: 4px;
-  background-color: #000;
-  border: none;
-  border-radius: 12px;
-}
-
-.lista-semanas li {
-  padding: 20px;
-}
-
-.imagen-perfil {
-  border-radius: 50%;
-  border: 2px solid #000;
-}
-
-.btn-github {
-  border: 2px solid #000;
-  border-radius: 8px;
-  padding: 10px;
-  color: #000;
+.nav ul li a {
   text-decoration: none;
+  color: #000;
+  font-weight: 600;
 }
 
-.imagen-programador {
-  border-radius: 12px;
-  margin-top: 40px;
+.banner {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
