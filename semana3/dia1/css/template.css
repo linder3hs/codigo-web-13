@@ -19,21 +19,22 @@ body {
 .grid-container {
   height: 100vh;
   display: grid;
+
+  grid-template-columns: 200px auto 200px;
+  grid-template-rows: 100px auto 100px;
   /* ** grid-template-areas */
   /* sirve para asignar un nombre a 
   las columans y filas */
-  grid-template-columns: 200px auto 200px;
-  grid-template-rows: 100px auto 100px;
   grid-template-areas:
-    "header  header  header"
-    "navbar  main sidebar"
+    "header  header   sidebar"
+    "navbar  main     sidebar"
+    "footer  footer   sidebar"
     /* "main    main    main" */
-    /* "sidebar sidebar sidebar" */
-    "footer  footer  footer";
+    /* "sidebar sidebar sidebar" */;
 }
 
 .header {
-  background-color: aqua;
+  -color: aqua;
   grid-area: header;
 }
 
