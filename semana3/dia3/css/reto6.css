@@ -67,11 +67,17 @@ body {
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 50vh 50vh 50vh 70vh 30vh;
   grid-template-areas:
-    "transform transform transform-image transform-image"
-    "standout-image standout-image standout standout"
-    "cherry cherry orange orange"
-    "testimonial testimonial testimonial testimonial"
-    "milk orange-plate ice build";
+    "transform      transform      transform-image transform-image"
+    "standout-image standout-image standout        standout"
+    "cherry         cherry         orange          orange"
+    "testimonial    testimonial    testimonial     testimonial"
+    "milk           orange-plate   ice             build";
+}
+
+.grid-container div {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .item1 {
@@ -82,18 +88,12 @@ body {
   background-color: hsl(51, 100%, 49%) !important;
   background: url("../images/desktop/image-transform.jpg");
   grid-area: transform-image;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item3 {
   background-color: hsl(7, 99%, 70%) !important;
   background: url("../images/desktop/image-stand-out.jpg");
   grid-area: standout-image;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item4 {
@@ -168,18 +168,12 @@ body {
   background-color: rgb(151, 214, 199) !important;
   background: url("../images/desktop/image-graphic-design.jpg");
   grid-area: cherry;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item6 {
   background-color: rgb(78, 191, 255) !important;
   background: url("../images/desktop/image-photography.jpg");
   grid-area: orange;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item7 {
@@ -189,31 +183,21 @@ body {
 .item8 {
   grid-area: milk;
   background: url("../images/desktop/image-gallery-milkbottles.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item9 {
   grid-area: orange-plate;
   background: url("../images/desktop/image-gallery-orange.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item10 {
   grid-area: ice;
   background: url("../images/desktop/image-gallery-cone.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
 
 .item11 {
   grid-area: build;
   background: url("../images/desktop/image-gallery-sugarcubes.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }
+
+
