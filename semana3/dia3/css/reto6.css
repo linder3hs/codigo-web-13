@@ -8,11 +8,12 @@ body {
 }
 
 .header {
+  background-color: #40bfff !important;
   background: url("../images/desktop/image-header.jpg");
-  height: 100vh;
+  height: 60vh;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: bottom;
+  background-size: 70%;
 }
 
 .nav {
@@ -47,4 +48,16 @@ body {
   padding-right: 20px;
   border-radius: 20px;
   font-weight: 600;
+}
+
+.content-title {
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.content-title h1 {
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 10px;
 }
