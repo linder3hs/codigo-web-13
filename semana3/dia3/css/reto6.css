@@ -65,7 +65,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 33vh 33vh;
+  grid-template-rows: 50vh 50vh;
   grid-template-areas:
     "transform transform-image"
     "standout-image standout";
@@ -76,15 +76,32 @@ body {
 }
 
 .item2 {
+  background-color: hsl(51, 100%, 49%) !important;
   background: url("../images/desktop/image-transform.jpg");
   grid-area: transform-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .item3 {
+  background-color: hsl(7, 99%, 70%) !important;
   background: url("../images/desktop/image-stand-out.jpg");
   grid-area: standout-image;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .item4 {
   grid-area: standout;
+}
+
+.container-text {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  margin: auto;
 }
