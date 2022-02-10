@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+}
+
+.header {
+  background: url("../images/desktop/image-header.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav div {
+  padding: 20px;
+}
+
+.menu-nav {
+  display: flex;
+  list-style: none;
+}
+
+.menu-nav li {
+  padding-right: 30px;
+}
+
+.menu-nav li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-contact {
+  font-family: "Fraunces", serif;
+  background-color: hsl(0, 0%, 100%);
+  color: #000 !important;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+  font-weight: 600;
+}
