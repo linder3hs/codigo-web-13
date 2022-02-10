@@ -65,10 +65,11 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 50vh 50vh;
+  grid-template-rows: 50vh 50vh 50vh;
   grid-template-areas:
     "transform transform-image"
-    "standout-image standout";
+    "standout-image standout"
+    "cherry orange";
 }
 
 .item1 {
@@ -129,4 +130,22 @@ body {
 
 .learn-red {
   border-bottom: solid 5px hsl(7, 99%, 70%);
+}
+
+.item5 {
+  background-color: rgb(151, 214, 199) !important;
+  background: url("../images/desktop/image-graphic-design.jpg");
+  grid-area: cherry;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.item6 {
+  background-color: rgb(78, 191, 255) !important;
+  background: url("../images/desktop/image-photography.jpg");
+  grid-area: orange;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
