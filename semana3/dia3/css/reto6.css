@@ -136,7 +136,6 @@ body {
 }
 .border a {
   text-decoration: none;
-  display: block;
   margin-bottom: 0 !important;
   position: absolute;
   bottom: 1px;
@@ -230,4 +229,32 @@ body {
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.title-testimonial {
+  font-family: "Fraunces", serif;
+  font-size: 1.3em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  margin-bottom: 50px;
+}
+
+.img-round {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.text-testimonial {
+  width: 70%;
+  margin: auto;
+  color: hsl(212, 27%, 19%);
+  font-size: 14px;
+}
+
+.name-testimonial {
+  font-family: "Fraunces", serif;
+  margin-top: 40px;
+  font-size: 0.8em;
 }
