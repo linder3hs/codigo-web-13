@@ -132,6 +132,13 @@ body {
   border-bottom: solid 5px hsl(7, 99%, 70%);
 }
 
+.container-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+}
+
 .item5 {
   background-color: rgb(151, 214, 199) !important;
   background: url("../images/desktop/image-graphic-design.jpg");
