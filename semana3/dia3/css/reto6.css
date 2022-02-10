@@ -61,3 +61,30 @@ body {
   margin-bottom: 30px;
   letter-spacing: 10px;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 33vh 33vh;
+  grid-template-areas:
+    "transform transform-image"
+    "standout-image standout";
+}
+
+.item1 {
+  grid-area: transform;
+}
+
+.item2 {
+  background: url("../images/desktop/image-transform.jpg");
+  grid-area: transform-image;
+}
+
+.item3 {
+  background: url("../images/desktop/image-stand-out.jpg");
+  grid-area: standout-image;
+}
+
+.item4 {
+  grid-area: standout;
+}
