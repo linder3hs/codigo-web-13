@@ -64,12 +64,14 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 50vh 50vh 50vh;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 50vh 50vh 50vh 70vh 30vh;
   grid-template-areas:
-    "transform transform-image"
-    "standout-image standout"
-    "cherry orange";
+    "transform transform transform-image transform-image"
+    "standout-image standout-image standout standout"
+    "cherry cherry orange orange"
+    "testimonial testimonial testimonial testimonial"
+    "milk orange-plate ice build";
 }
 
 .item1 {
@@ -140,20 +142,26 @@ body {
 }
 
 .container-text-bottom * {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .container-text-bottom h3 {
   font-family: "Fraunces", serif;
-  font-weight: 600;
-  color: hsl(213, 9%, 39%);
+  font-weight: 900;
+}
+
+.letter-green {
+  color: #24544c;
+}
+
+.letter-blue {
+  color: #19566d;
 }
 
 .container-text-bottom p {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  color: hsl(213, 9%, 39%);
 }
 
 .item5 {
@@ -169,6 +177,42 @@ body {
   background-color: rgb(78, 191, 255) !important;
   background: url("../images/desktop/image-photography.jpg");
   grid-area: orange;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.item7 {
+  grid-area: testimonial;
+}
+
+.item8 {
+  grid-area: milk;
+  background: url("../images/desktop/image-gallery-milkbottles.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.item9 {
+  grid-area: orange-plate;
+  background: url("../images/desktop/image-gallery-orange.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.item10 {
+  grid-area: ice;
+  background: url("../images/desktop/image-gallery-cone.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.item11 {
+  grid-area: build;
+  background: url("../images/desktop/image-gallery-sugarcubes.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
