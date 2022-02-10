@@ -98,10 +98,35 @@ body {
 }
 
 .container-text {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-  width: 60%;
+  width: 40%;
   margin: auto;
+}
+
+.container-text * {
+  margin-bottom: 20px;
+}
+
+.container-text h2 {
+  font-family: "Fraunces", serif;
+  font-size: 2.2em;
+}
+
+.container-text p {
+  color: hsl(213, 9%, 39%);
+}
+
+.container-text a {
+  font-family: "Fraunces", serif;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.learn-yellow {
+  border-bottom: solid 5px hsl(51, 100%, 49%);
+}
+
+.learn-red {
+  border-bottom: solid 5px hsl(7, 99%, 70%);
 }
