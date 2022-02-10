@@ -139,6 +139,23 @@ body {
   text-align: center;
 }
 
+.container-text-bottom * {
+  margin-bottom: 40px;
+}
+
+.container-text-bottom h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  color: hsl(213, 9%, 39%);
+}
+
+.container-text-bottom p {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  color: hsl(213, 9%, 39%);
+}
+
 .item5 {
   background-color: rgb(151, 214, 199) !important;
   background: url("../images/desktop/image-graphic-design.jpg");
