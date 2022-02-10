@@ -77,7 +77,7 @@ body {
 .grid-container div {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }
 
 .item1 {
@@ -126,12 +126,30 @@ body {
   text-transform: uppercase;
 }
 
+.border {
+  background-position: bottom;
+  border-radius: 5px;
+  width: 120px;
+  height: 8px;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+.border a {
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0 !important;
+  position: absolute;
+  bottom: 1px;
+  left: 4px;
+}
 .learn-yellow {
-  border-bottom: solid 5px hsl(51, 100%, 49%);
+  background-color: hsl(51, 100%, 49%);
+  opacity: 0.8;
 }
 
 .learn-red {
-  border-bottom: solid 5px hsl(7, 99%, 70%);
+  background-color: hsl(7, 99%, 70%);
+  opacity: 0.8;
 }
 
 .container-text-bottom {
@@ -176,10 +194,6 @@ body {
   grid-area: orange;
 }
 
-.item7 {
-  grid-area: testimonial;
-}
-
 .item8 {
   grid-area: milk;
   background: url("../images/desktop/image-gallery-milkbottles.jpg");
@@ -200,4 +214,20 @@ body {
   background: url("../images/desktop/image-gallery-sugarcubes.jpg");
 }
 
+.item7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: testimonial;
+  align-items: center;
+}
 
+.item7 * {
+  margin-bottom: 30px;
+}
+
+.container-testimonial {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
