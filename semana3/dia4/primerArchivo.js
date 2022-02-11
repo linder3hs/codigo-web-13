@@ -33,12 +33,12 @@ console.warn("Resultado: ", resultado);
 // abre una ventana tipo alerta pero la cual nos permite ingresar valor
 // y ese valor se guarda en una variable
 
-const valor1 = prompt("Ingrese un valor1"); // 10
-const valor2 = prompt("Ingrese un valor2"); // 20
+const valor1 = 10; //prompt("Ingrese un valor1"); // 10
+const valor2 = 20; //prompt("Ingrese un valor2"); // 20
 
 // necesito que el usuario ingrese el tipo de operacion que puede ser
 // ** Pueder ser => +, -, *, /
-const operacion = prompt("Ingrese una operacion pueder ser + - * /");
+const operacion = "+"; // prompt("Ingrese una operacion pueder ser + - * /");
 
 let resultadoCalculadora = 0;
 
@@ -66,3 +66,54 @@ if (operacion === "+") {
 } else {
   console.error("Operacion no valida");
 }
+
+// Haremos un algoritmo para poder detectar si un numero es par o impar
+const numeroMultiplo = 12;
+
+// la forma en la que pueda saber si un numero es par es usando %
+// porque es una operacion que brinda el residuo
+
+// mod = %
+if (numeroMultiplo % 2 === 0) {
+  console.log("Numero par", numeroMultiplo);
+}
+
+if (numeroMultiplo % 3 === 0) {
+  console.log("Numero multiplo de 3", numeroMultiplo);
+}
+
+// Escriban un algoritmo que pida
+// 2 numeros usando prompt e impriman el numero mayor
+const numeroOne = +prompt("Ingrese un numero1");
+const numeroTwo = +prompt("Ingrese un numero2");
+
+let mensajeRes = "Numero 2 es mayor";
+
+if (numeroOne > numeroTwo) {
+  mensajeRes = "Numero 1 es mayor";
+}
+
+console.log(mensajeRes);
+
+// vamos a ver como usar los operadores and y or
+// and : &&
+// or : ||
+// ** Esto podemos usarlo en los if
+
+const edadMayor = 19;
+const nombreMayor = "Juan";
+
+// !! se usa para poder concatenar condiciones
+// !! Pueden poner una cantidad ilimitada de condiciones
+
+// !! ambas condiciones se deben para cumplir para entrar al if
+if (edadMayor === 18 && nombreMayor === "Juan") {
+  console.log("El usuario es Juan y tiene 18 años");
+}
+
+// !! al menos una de las 2 condiciones se debe cumplir para entrar al if
+if (edadMayor === 18 || nombreMayor === "Juan") {
+  console.log("El usuario es Juan o tiene 18 años");
+}
+
+// ** Consejo: Traten de no usar mucho el else
