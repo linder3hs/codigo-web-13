@@ -91,3 +91,60 @@ console.log(sumar("10", 30));
 //* se puede llamar una funcion dentro de otra?
 //* si, se puede
 
+// TODO: Function de expresion
+// !Es tener una funcion dentro de una variable
+// !Es conocido function anonima
+const resta = function (numero1, numero2) {
+  const calcResta = +numero1 - +numero2;
+
+  return isNaN(calcResta) ? "Error: no se puede restar" : calcResta;
+};
+
+console.log("Resta:", resta(10, 20));
+
+// Ejemplo2
+const multiplicacion = function (numero1, numero2) {
+  const calcMultiplicacion = +numero1 * +numero2;
+
+  return isNaN(calcMultiplicacion)
+    ? "Error: no se puede multiplicar"
+    : calcMultiplicacion;
+};
+
+//* arrow function => funciones flecha
+//* Es una function parecida a la funciona anonima o de expresion, sim embargo no
+//* hace falta usar la palabra function para declarar esta.
+//* Otro punto importante es que una funcion flecha no puede usar `this`
+//* Esto es la diferencia entre una funcion y un arrow function
+//? como declaramos un arrow function?
+const division = (numero1, numero2) => {
+  if (+numero2 === 0) {
+    // termina la ejeccion de la funcion y retorn ese string
+    return "Error: no se puede dividir por 0";
+  }
+
+  const calcDivision = +numero1 / +numero2;
+  return isNaN(calcDivision) ? "Error: no se puede dividir" : calcDivision;
+};
+
+console.log(division(10, "0"));
+console.log("Division:", division(10, 2));
+
+//? Cas1 cuando nuestro arrow function solo recibe un parametro no hace falta poner parentesis
+const saludar = (nombre, apellido) => {
+  // como imprimir de una forma mas elegante
+  // return "Hola mi nombre es " + nombre + " y mi apellido es " + apellido;
+  return `Hola mi nombre es ${nombre} y mi apellid es ${apellido}`;
+};
+
+console.log(saludar("Juan", "Perez"));
+
+//? Ahora cuando un arrow no recibe parametros no hace falta poner parentesis
+const funcionSinParametros = _ => {
+  return "Hola Mundo";
+};
+
+//? VAMOS a ver un arrow function inline
+//? Este tipo de funcion solo funcion cuando quiero ejecutar una linea de codigo
+//? Cuando usamos este tipo de funcion el return esta implicito
+const hello = () => "Hola Mundo in one line";
