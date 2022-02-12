@@ -68,12 +68,6 @@ nombreDeLaFuncion();
 
 // condicion ? true (si es true puede ejecutar una linea) : false (si es false puede ejecutar una linea)
 
-function sumar(numero1, numero2) {
-  const suma = +numero1 + +numero2;
-
-  return isNaN(suma) ? "Error: no se puede sumar" : suma;
-}
-
 //! Cuando yo llame a sumar yo debo pasarle numero1 y numero2
 //! el orden que yo le paso los parametros sera el orden en que los reciva
 console.log(sumar(50, 20));
@@ -103,13 +97,6 @@ const resta = function (numero1, numero2) {
 console.log("Resta:", resta(10, 20));
 
 // Ejemplo2
-const multiplicacion = function (numero1, numero2) {
-  const calcMultiplicacion = +numero1 * +numero2;
-
-  return isNaN(calcMultiplicacion)
-    ? "Error: no se puede multiplicar"
-    : calcMultiplicacion;
-};
 
 //* arrow function => funciones flecha
 //* Es una function parecida a la funciona anonima o de expresion, sim embargo no
@@ -117,15 +104,6 @@ const multiplicacion = function (numero1, numero2) {
 //* Otro punto importante es que una funcion flecha no puede usar `this`
 //* Esto es la diferencia entre una funcion y un arrow function
 //? como declaramos un arrow function?
-const division = (numero1, numero2) => {
-  if (+numero2 === 0) {
-    // termina la ejeccion de la funcion y retorn ese string
-    return "Error: no se puede dividir por 0";
-  }
-
-  const calcDivision = +numero1 / +numero2;
-  return isNaN(calcDivision) ? "Error: no se puede dividir" : calcDivision;
-};
 
 console.log(division(10, "0"));
 console.log("Division:", division(10, 2));
@@ -140,7 +118,7 @@ const saludar = (nombre, apellido) => {
 console.log(saludar("Juan", "Perez"));
 
 //? Ahora cuando un arrow no recibe parametros no hace falta poner parentesis
-const funcionSinParametros = _ => {
+const funcionSinParametros = (_) => {
   return "Hola Mundo";
 };
 
@@ -148,3 +126,92 @@ const funcionSinParametros = _ => {
 //? Este tipo de funcion solo funcion cuando quiero ejecutar una linea de codigo
 //? Cuando usamos este tipo de funcion el return esta implicito
 const hello = () => "Hola Mundo in one line";
+
+// sabemos que cuando declaro una varible ese nombre ya no se puede usar
+
+// esto es una doble declaracion de variable
+// const edad = 10;
+
+// const edad = 20;
+let numeroGlobal = 10;
+
+const calcularEsMayor = () => {
+  const edad = 18;
+
+  const nombre = "Pepe";
+
+  // ahora van a poder notar la diferencia entre var y let
+  console.log("numeroGlobal", numeroGlobal);
+  console.log(edad);
+};
+
+function ejemplo() {
+  console.log("numeroGlobal", numeroGlobal);
+}
+
+calcularEsMayor();
+ejemplo();
+
+const mostrarEdad = () => {
+  const edad = 18;
+  const nombre = "Juana";
+
+  console.log(edad);
+};
+
+//? Recomenedaciones
+//? Los nombre de las funciones deben ser verbos, porque siempre relizan una accion
+//? y que inidiquen que hace la funcion
+
+//?ejemplo
+function sunar() {}
+
+function calcularResta() {}
+
+function actualizarNombre() {}
+
+//? Traten de no pasar mas de 3 parametros a una funcion
+//* Recuerden que los parametros de una funcion pueder de cualquier tipo
+//* puede acetpar arrays
+//* vamos a ver como pasar un objeto a una variable
+
+const alumenosTecsup = ["Juan", "Pedro", "Maria", "Ana", "Juana"];
+
+function listarAlumnos(alumnos) {
+  console.log("Alumnos tecsup", alumnos);
+}
+
+listarAlumnos(alumenosTecsup);
+
+//? Otra recomendacion es que si ustedes ven codigo repetido lleven a una funcion
+function validarSiEsNumero(numero, tipo) {
+  return isNaN(numero) ? `Mensaje Error: no se puede ${tipo}` : numero;
+}
+
+function sumar(numero1, numero2) {
+  const suma = +numero1 + +numero2;
+
+  return validarSiEsNumero(suma, "sumar");
+}
+
+const restar = function (numero1, numero2) {
+  const calcResta = +numero1 - +numero2;
+
+  return validarSiEsNumero(calcResta, "restar");
+};
+
+const multiplicar = function (numero1, numero2) {
+  const calcMultiplicacion = +numero1 * +numero2;
+
+  return validarSiEsNumero(calcMultiplicacion, "multiplicar");
+};
+
+const dividir = (numero1, numero2) => {
+  if (+numero2 === 0) {
+    // termina la ejeccion de la funcion y retorn ese string
+    return "Error: no se puede dividir por 0";
+  }
+
+  const calcDivision = +numero1 / +numero2;
+  return validarSiEsNumero(calcDivision, "dividir");
+};
