@@ -117,3 +117,9 @@ if (edadMayor === 18 || nombreMayor === "Juan") {
 }
 
 // ** Consejo: Traten de no usar mucho el else
+
+// Escriban un algoritmo que pida
+// 3 numeros usando prompt e impriman el numero mayor
+
+// booleanos
+// true || false
