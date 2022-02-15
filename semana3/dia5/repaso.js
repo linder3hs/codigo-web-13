@@ -84,5 +84,37 @@ console.log(obtenerSegundoValor(valores));
 let nombre;
 
 // recuerden que en js se sabe el tipo em base al valor
-
 console.log("nombre", nombre);
+
+// new Array
+// lo array vacion son variable las cuales empizan vacias y en base a algo se pueden
+
+// Esto es la declaracion de un array vacion
+// let carros = new Array();
+
+// la nueva forma es la siguiente
+let carrosNuevos = [];
+
+// quiero llenar un array desde una funcion
+// vamos a crear una funcion la cual se encargue de llenar el array carrosNuevos
+const llenarCarrosNuevos = (nuevoValor) => {
+  //* existe una funcion de js llamada push(parametro) la cual recibe
+  //* un valor y lo coloca al final de arreglo
+
+  //* Esto le añade el nuevoValor al array carrosNuevos
+  //! el push solo funciona si la variable es un arreglo
+  carrosNuevos.push(nuevoValor);
+};
+
+llenarCarrosNuevos("Mercedez GLA");
+llenarCarrosNuevos("BMW M4");
+llenarCarrosNuevos("Tesla");
+llenarCarrosNuevos("Ford");
+// este array seria un elemento de carrosNuevo, por ende esto es un array dentro de un array
+llenarCarrosNuevos(["Tiko", "Maverik 62", "mitsubishi"]);
+
+console.log(carrosNuevos);
+
+//! hagmos una funcion que me diga si un numero es par o impar
+//? Hagan una function que reciba un numero y retorne si es par o impar
+//! para ahorita
