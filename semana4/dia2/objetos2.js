@@ -161,3 +161,6 @@ console.log("Pantalla", components.caracteristicas.extra.pantalla);
 
 // como imprimos el valor de teclado
 console.log("Teclado", components.caracteristicas["111"].teclado);
+
+//! Crear el array de objetos del link que comparti, ojo solo con 3 objetos
+//https://www.bhphotovideo.com/c/buy/macbook-pro-16-2021/ci/51717
