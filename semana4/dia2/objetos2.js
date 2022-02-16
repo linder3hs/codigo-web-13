@@ -129,3 +129,35 @@ const laptops = [
 ];
 
 console.log(laptops);
+
+//? Creen que los keys puedan ser numeros?
+const listaDeUtiles = {
+  1: "Hojas bond",
+  2: "Plumones",
+  3: "Lapiceros",
+};
+
+console.log(listaDeUtiles["1"]);
+console.log(listaDeUtiles["2"]);
+
+//? Objetos dentro de objetos
+const components = {
+  nombre: "Lenovo IPad",
+  caracteristicas: {
+    ram: 16,
+    tarjeta: "3090 super",
+    memoria: 512,
+    extra: {
+      pantalla: "4k",
+    },
+    111: {
+      teclado: "Español",
+    },
+  },
+};
+
+console.log("Tarjeta", components.caracteristicas.tarjeta);
+console.log("Pantalla", components.caracteristicas.extra.pantalla);
+
+// como imprimos el valor de teclado
+console.log("Teclado", components.caracteristicas["111"].teclado);
