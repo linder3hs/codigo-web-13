@@ -169,10 +169,16 @@ console.log(contarVocales("aeiou"));
 
 //   return divisoresComunes;
 // };
-
+//! inicio
 const hallarDivisoresComunes = (numero1, numero2) => {
+  // para poder usar una funcion que he creado solanmente necista llamarla por su nombre
+
+  // 1: Creo un array vacio
   const arrayDivisores = [];
+  // 2: He creado una variable llamada primerosDivisores
+  // 3: Quiero que esta variable se guarden los divisores del primer numero
   const primerosDivisores = hallarDivisores(numero1, arrayDivisores);
+  //* primerosDivisores = [1, 2, 5, 10]
   // entonces la variable primerosDivisores es un array
   const segundosDivosores = hallarDivisores(numero2, primerosDivisores);
   // sort sirve para ordenar un array
@@ -185,6 +191,7 @@ const hallarDivisoresComunes = (numero1, numero2) => {
     }
   }
 };
+//! fin
 
 // para que funcion sea operativa debe retornar un arreglo con los numeros que son
 // divisores
