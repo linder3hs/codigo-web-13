@@ -49,6 +49,8 @@ const imprimirTablaMultiplicar = (numero) => {
 //* pantalla todos los números impares desde 1 hasta ese número separados por comas.
 // TODO: 10
 //! Resultado: 1, 3, 5, 7, 9
+
+//? HAGAN LO MISMO PERO AHORA CON FOR
 const hallarNumerosImpares = (numero) => {
   if (numero <= 0) {
     // termina el programa y retorna ese mensaje
@@ -81,3 +83,38 @@ console.log("Numeros impares", hallarNumerosImpares(10));
 //   }
 // };
 // imprimirNumerosImpares(4);
+
+//* Escribir un programa que pida al usuario un número entero y
+//* muestre por pantalla si es un número primo o no.
+//? 1 => 1
+//? 2 => 1, 2
+//? 3 => 1, 3
+//? 4 => 1, 2, 4
+//? 5 => 1, 6
+//? 6 => 1, 2, 3, 6
+//? 7 => 1, 7
+
+const hallarNumeroPrimo = (numero) => {
+  //? como sabeos si un numero es entero
+  if (numero % 1 !== 0) {
+    return "El numero es un decimal";
+  }
+
+  if (numero === 1) {
+    return "No es un numero primo";
+  }
+
+  let contador = 0;
+  let contadorDeDivisores = 0;
+
+  while (contador <= numero) {
+    if (numero % contador === 0) {
+      contadorDeDivisores++;
+    }
+    contador++;
+  }
+  //* que estoy guardando en la variable contadorDeDivisores
+  return contadorDeDivisores === 2
+    ? "Si es un numero primo"
+    : "No es un numero primo";
+};
