@@ -105,5 +105,14 @@ console.log(resultado);
 const resultado2 = numerosCuadrados.map((numero) => Math.pow(numero, 3));
 console.log(resultado2);
 
-
 //* Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
+const imprimirTable = (numero) => {
+  // es instancia esta creando un array vacion con 10 elementos
+  const arrayDiez = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  arrayDiez.map((table, index) => {
+    console.log("producto", numero * (index + 1));
+  });
+};
+
+imprimirTable(10);
