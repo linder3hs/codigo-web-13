@@ -145,4 +145,15 @@ console.log(arrayLaptops);
 // find
 // findIndex
 
+//* POR VER
+// for of
+// for in
+// do while
+// flat
+// flatMap
+// every
+
+// object.entries
+
+
 console.log("nombreDesdeRepaso", nombreDesdeRepaso);
