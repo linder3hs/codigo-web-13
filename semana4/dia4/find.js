@@ -22,7 +22,7 @@ const products2 = [
   { nombre: "refri", categoria: "Electro" },
 ];
 
-const filtro = products.find((product) => product.categoria === "Computo");
+const filtro = products2.find((product) => product.categoria === "Computo");
 console.log(filtro);
 
 const alumnos = [
@@ -79,4 +79,70 @@ const laptops = [
       discoDuroSolido: "256gb",
     },
   },
+  {
+    marca: "Acer 2",
+    imagen: "https://logo.com",
+    nombre: "AN515 15.6",
+    vendedor: "Falabella",
+    precioOferta: 3399,
+    precioNormal: 4999,
+    calificacion: 5,
+    caracteristicas: {
+      procesador: "i3",
+      tarjetaDeVideo: "GTX 1650",
+      discoDuro: "No tiene",
+      discoDuroSolido: "256gb",
+    },
+  },
+  {
+    marca: "Acer",
+    imagen: "https://logo.com",
+    nombre: "AN515 15.6",
+    vendedor: "Falabella",
+    precioOferta: 3399,
+    precioNormal: 4999,
+    calificacion: 5,
+    caracteristicas: {
+      procesador: "i7",
+      tarjetaDeVideo: "GTX 1650",
+      discoDuro: "No tiene",
+      discoDuroSolido: "256gb",
+    },
+  },
 ];
+
+const filterLaptopsi3 = laptops.filter(
+  (laptop) =>
+    laptop.caracteristicas.procesador === "i3" && laptop.precioOferta < 2000
+);
+
+console.log(filterLaptopsi3);
+
+// forEach
+//! Crear un nuevo array basado en el array laptop y agregar un nuevo atributo llamadd
+//! vendido sera true || false
+const arrayLaptops = [];
+//! Recordemos que el forEach no retorna nada, por lo uso cuando quiero hacer una accion
+//! pero no necesita esta retorne algo
+laptops.forEach((laptop, index) => {
+  // numero % 2 = Hallar el residuo de una division
+  // si el el residuo es 0 es un numero par si no es impar
+  // index => 0
+  // index => 1
+  // index => 2
+  laptop.vendido = index % 2 === 0 ? true : false;
+
+  arrayLaptops.push(laptop);
+});
+
+console.log(arrayLaptops);
+
+// for
+// while
+// map
+// forEach
+// filter
+// find
+// findIndex
+
+console.log("nombreDesdeRepaso", nombreDesdeRepaso);

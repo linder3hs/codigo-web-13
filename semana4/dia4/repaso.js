@@ -118,3 +118,5 @@ const cursoPHP = filterCursosTec(arregloCursos, "PHP");
 console.log("Curso JS", cursoJS);
 console.log("Curso Python", cursoPython);
 console.log("Curso PHP", cursoPHP);
+
+const nombreDesdeRepaso = "Nombre desde repaso";
