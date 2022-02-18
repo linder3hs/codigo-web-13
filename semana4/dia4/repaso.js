@@ -106,3 +106,15 @@ const arregloCursos = [
 //cursosJS
 //cursosPython
 //cursosPHP
+
+const filterCursosTec = (arrayCursos, tecFiltro) => {
+  return arrayCursos.filter((curso) => curso.tec === tecFiltro);
+};
+
+const cursoJS = filterCursosTec(arregloCursos, "JS");
+const cursoPython = filterCursosTec(arregloCursos, "Python");
+const cursoPHP = filterCursosTec(arregloCursos, "PHP");
+
+console.log("Curso JS", cursoJS);
+console.log("Curso Python", cursoPython);
+console.log("Curso PHP", cursoPHP);
