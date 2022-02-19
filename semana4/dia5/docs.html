@@ -811,7 +811,10 @@
             <p>Ejemplo</p>
             <div class="code-container">
               <p>const alumnos = ["Pepe", "Sultano", "Mengano"]</p>
-              <p>alumnos.map((alumno, index) => console.log(index, alumno))</p>
+              <p>
+                const resultado = alumnos.map((alumno, index) =>
+                console.log(index, alumno))
+              </p>
             </div>
             <p>
               <span>Recomendacion</span>
@@ -821,6 +824,41 @@
             <p>alumnos => alumno</p>
             <p>mascotas => mascota</p>
             <p>computadoras => computadora</p>
+          </div>
+        </div>
+        <div class="document-container">
+          <div id="for-each">
+            <h2>For Each</h2>
+            <p>
+              Sirve para iterar datos, sin embargo a diferencia del map este no
+              retorna nada, es decir si yo guardo en una variable al forEacha
+              esta variable sera undefined
+            </p>
+            <p>Ejemplo</p>
+            <div class="code-container">
+              <p>const alumnos = ["Pepe", "Sultano", "Mengano"]</p>
+              <p>
+                alumnos.forEach((alumno, index) => console.log(index, alumno))
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="document-container">
+          <div id="filter">
+            <h2>Filter</h2>
+            <p>
+              Es el hermano de map, porque es usando para poder filtrar en base
+              a una condicion y este retorna un array
+            </p>
+            <p>Ejemplo</p>
+            <div class="code-container">
+              <p>const alumnos = ["Pepe", "Sultano", "Mengano"]</p>
+              <p>
+                const alumnoFilter = alumnos.filter((alumno, index) => alumno
+                === "Pepe"))
+              </p>
+              <p>// Va a retornar con Pep</p>
+            </div>
           </div>
         </div>
       </div>
