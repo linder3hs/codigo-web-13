@@ -857,7 +857,46 @@
                 const alumnoFilter = alumnos.filter((alumno, index) => alumno
                 === "Pepe"))
               </p>
-              <p>// Va a retornar con Pep</p>
+              <p>// Va a retornar con ["Pepe"]</p>
+            </div>
+          </div>
+        </div>
+        <div class="document-container">
+          <div id="find">
+            <h2>Find</h2>
+            <p>
+              Es un iterador de bucles pero este solo retorna 1 resultado y este
+              sera el primero que encuentre, es decir si en una lista tengo 2 o
+              mas resultados este solo va a tomar el primero y sera el que
+              devuelva
+            </p>
+            <div class="code-container">
+              <p>const alumnos = ["Pepe", "Sultano", "Mengano"]</p>
+              <p>
+                const alumnoFind = alumnos.find((alumno, index) => alumno ===
+                "Pepe"))
+              </p>
+              <p>
+                // Va a retornar con Pepe como string porque solo sera un dato
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="document-container">
+          <div id="find-index">
+            <h2>findIndex</h2>
+            <p>
+              Sirve para poder encontrar la posicion de un elemente en un array,
+              es decir este retorna el indice del elemento
+            </p>
+            <p>Ejemplo</p>
+            <div class="code-container">
+              <p>const alumnos = ["Pepe", "Sultano", "Mengano"]</p>
+              <p>
+                const alumnoFindIndex = alumnos.findIndex((alumno, index) =>
+                alumno === "Pepe"))
+              </p>
+              <p>// Va a retornar 0 porque es el indice que tiene Pepe</p>
             </div>
           </div>
         </div>
