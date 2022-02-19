@@ -548,6 +548,48 @@
             </div>
           </div>
         </div>
+        <div class="document-container">
+          <div id="new-object">
+            <h2>New Object</h2>
+            <p>
+              new Object() es una clase de JS la cual nos permite crear un
+              objeto a partir de esta, es un poco y actualmente no es tan
+              recomendado usarlo
+            </p>
+            <p>Ejemplo</p>
+            <div class="code-container">
+              <p><span class="variable">const </span>laptop = new Object();</p>
+              <p>laptop.memoria = "512gb";</p>
+              <p>laptop.ram = 16;</p>
+              <p>laptop.marca = "DELL";</p>
+            </div>
+          </div>
+        </div>
+        <div class="document-container">
+          <div class="leer-object">
+            <h2>Leer Objetos</h2>
+            <p>
+              La forma de accede a la propiedad de un objeto es
+              <span class="variable">.</span> ojo si tiene un un objeto dentro
+              de otro objeto igual puede el <span class="variable">.</span> para
+              navegar entre el objeto
+            </p>
+            <div class="code-container">
+              <p>
+                <span class="variable">const</span> persona =
+                <span class="llave">{</span>
+              </p>
+              <p>&nbsp;&nbsp;&nbsp;nombre: "Juancito",</p>
+              <p>&nbsp;&nbsp;&nbsp;apellido: "Perez",</p>
+              <p>&nbsp;&nbsp;&nbsp;123: 34,</p>
+              <p>&nbsp;&nbsp;&nbsp;domicilio: "Av siempre viva 123",</p>
+              <p><span class="llave">}</span></p>
+              <p>// Imprimiendo la propiedad nombre</p>
+              <p><span class="console">console.log</span>(persona.nombre);</p>
+              <p><span class="console">console.log</span>(persona["123"]);</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
