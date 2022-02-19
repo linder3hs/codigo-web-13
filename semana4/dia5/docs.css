@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #fff;
@@ -39,6 +43,10 @@ body {
 .item1 {
   grid-area: menu;
   background-color: #0a192a;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  overflow: auto;
 }
 .item2 {
   grid-area: navbar;
