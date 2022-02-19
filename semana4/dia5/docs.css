@@ -53,8 +53,8 @@ body {
   grid-area: navbar;
   background-color: #0a192a;
   position: fixed;
-  width: calc(100% - 300px);
-  right: 0;
+  width: calc(99% - 300px);
+  right: 16px;
 }
 
 .item3 {
