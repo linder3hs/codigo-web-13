@@ -499,6 +499,33 @@
             </p>
           </div>
         </div>
+        <div class="document-container">
+          <div id="function-function">
+            <h2>Function in Function</h2>
+            <p>
+              El concepto de invocar una function dentro de otra es algo normal
+              y muy usado, ustedes usar n functiones dentro de una function, de
+              hecho es lo idea tratar de usar functiones para poder hacer que
+              nuestro codigo este distribuido
+            </p>
+            <div>Ejemplo</div>
+            <div class="code-container">
+              <p>
+                <span class="variable">const</span> calcularMayorDeEdad = (edad)
+                =>
+                <span class="llave">{</span>
+              </p>
+              <p>&nbsp;&nbsp;&nbsp;const mayor = esMayor(edad);</p>
+              <p>&nbsp;&nbsp;&nbsp;return mayor</p>
+              <p><span class="llave">}</span></p>
+              <p>// function esMayor</p>
+              <p>
+                <span class="variable">const</span> esMayor(edad) => edad >= 18
+                ? true : false
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
