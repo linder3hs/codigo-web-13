@@ -128,9 +128,7 @@ body {
   width: 40px;
   height: 40px;
   background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   font-size: 25px;
   border-radius: 50%;
   color: #0a192a;
