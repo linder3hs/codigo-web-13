@@ -46,6 +46,7 @@ body {
   position: fixed;
   width: 300px;
   height: 100%;
+  /* esto es para activar el scroll */
   overflow: auto;
 }
 .item2 {
@@ -72,4 +73,22 @@ body {
   border-radius: 6px;
   width: 70%;
   margin-left: 12px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100px;
+  margin-right: 30px;
+}
+
+.logo-container img {
+  filter: brightness(0) invert(1);
+}
+
+.btn-github {
+  background-color: #fff;
+  padding: 2px;
+  border-radius: 6px;
 }
