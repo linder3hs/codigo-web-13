@@ -22,7 +22,9 @@
           <ul>
             <li><a href="#var">var</a></li>
             <li><a href="#let">let</a></li>
-            <li><a href="#const">const</a></li>
+            <li>
+              <a href="#const">const</a>
+            </li>
           </ul>
         </div>
         <div class="container-tema">
@@ -183,9 +185,9 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const nombre = "Juan";</p>
-              <p>const edad = 23;</p>
-              <p>const apellido = "Perez"</p>
+              <p><span class="variable">const</span> nombre = "Juan";</p>
+              <p><span class="variable">const</span> edad = 23;</p>
+              <p><span class="variable">const</span> apellido = "Perez"</p>
             </div>
           </div>
         </div>
@@ -199,10 +201,13 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const edad = 18;</p>
-              <p>if (edad >= 18) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log("Es mayor de edad")</p>
-              <p>}</p>
+              <p><span class="variable">const</span> edad = 18;</p>
+              <p>if (edad >= 18) <span class="llave">{</span></p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>("Es
+                mayor de edad")
+              </p>
+              <p><span class="llave">}</span></p>
             </div>
           </div>
         </div>
@@ -216,12 +221,20 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const edad = 18;</p>
-              <p>if (edad >= 18) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log("Es mayor de edad")</p>
-              <p>} else {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log("Es menor de edad")</p>
-              <p>}</p>
+              <p><span class="variable">const</span> edad = 18;</p>
+              <p>if (edad >= 18) <span class="llave">{</span></p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>("Es
+                mayor de edad")
+              </p>
+              <p>
+                <span class="llave">}</span> else <span class="llave">{</span>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>("Es
+                menor de edad")
+              </p>
+              <p><span class="llave">}</span></p>
             </div>
             <p>
               <span class="important">Importante: </span>
@@ -230,12 +243,21 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const edad = 18;</p>
-              <p>if (edad >= 18) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log("Es mayor de edad")</p>
-              <p>} else if (edad === 15) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log("Es usuario tiene 15")</p>
-              <p>}</p>
+              <p><span class="variable">const</span> edad = 18;</p>
+              <p>if (edad >= 18) <span class="llave">{</span></p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>("Es
+                mayor de edad")
+              </p>
+              <p>
+                <span class="llave">}</span> else if (edad === 15)
+                <span class="llave">{</span>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>("Es
+                usuario tiene 15")
+              </p>
+              <p><span class="llave">}</span></p>
             </div>
           </div>
         </div>
@@ -267,10 +289,11 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const nombre = "Juan";</p>
+              <p><span class="variable">const</span> nombre = "Juan";</p>
               <p>
-                nombre === "Juan" ? console.log("Lo encontramos") :
-                console.log("No lo encontramos 😢")
+                nombre === "Juan" ? <span class="console">console.log</span>("Lo
+                encontramos") : <span class="console">console.log</span>("No lo
+                encontramos 😢")
               </p>
             </div>
           </div>
@@ -291,8 +314,11 @@
             </ul>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const arreglo = ["Pepe", 2, true, 90.4, 5];</p>
-              <p>console.log(arreglo);</p>
+              <p>
+                <span class="variable">const</span> arreglo = ["Pepe", 2, true,
+                90.4, 5];
+              </p>
+              <p><span class="console">console.log</span>(arreglo);</p>
             </div>
             <p>
               <span class="important">Importante: </span>
@@ -315,11 +341,14 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const arreglo = ["Pepe", 2, true, 90.4, 5];</p>
+              <p>
+                <span class="variable">const</span> arreglo = ["Pepe", 2, true,
+                90.4, 5];
+              </p>
               <p>- Accedemos al primer elemento -</p>
-              <p>console.log(arreglo[0]);</p>
+              <p><span class="console">console.log</span>(arreglo[0]);</p>
               <p>- Accedemos al segundo elemento -</p>
-              <p>console.log(arreglo[1]);</p>
+              <p><span class="console">console.log</span>(arreglo[1]);</p>
             </div>
           </div>
         </div>
@@ -332,10 +361,16 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const arreglo = ["Pepe", 2, true, 90.4, 5];</p>
+              <p>
+                <span class="variable">const</span> arreglo = ["Pepe", 2, true,
+                90.4, 5];
+              </p>
               <p>arreglo.push(true);</p>
-              <p>arreglo.push({ nombre: "Juana", edad: 18 })</p>
-              <p>console.log(arreglo);</p>
+              <p>
+                arreglo.push(<span class="llave">{</span> nombre: "Juana", edad:
+                18 <span class="llave">}</span>)
+              </p>
+              <p><span class="console">console.log</span>(arreglo);</p>
             </div>
           </div>
         </div>
@@ -355,9 +390,13 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>function saludar(nombre) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log(`Hola ${nombre}`);</p>
-              <p>}</p>
+              <p>function saludar(nombre) <span class="llave">{</span></p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>(`Hola
+                $<span class="llave">{</span>nombre<span class="llave">}</span
+                >`);
+              </p>
+              <p><span class="llave">}</span></p>
               <p>
                 // Es la forma es la que llamos a la funcion y le pasamos como
                 parametro el nombre Juan
@@ -375,16 +414,30 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const saludar = function(nombre) {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log(`Hola ${nombre}`);</p>
-              <p>}</p>
+              <p>
+                <span class="variable">const</span> saludar = function(nombre)
+                <span class="llave">{</span>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>(`Hola
+                $<span class="llave">{</span>nombre<span class="llave">}</span
+                >`);
+              </p>
+              <p><span class="llave">}</span></p>
               <p>saludar("Juan");</p>
             </div>
             <p>Ejemplo 2</p>
             <div class="code-container">
-              <p>const saludar = (nombre) => {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log(`Hola ${nombre}`);</p>
-              <p>}</p>
+              <p>
+                <span class="variable">const</span> saludar = (nombre) =>
+                <span class="llave">{</span>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>(`Hola
+                $<span class="llave">{</span>nombre<span class="llave">}</span
+                >`);
+              </p>
+              <p><span class="llave">}</span></p>
               <p>saludar("Juan");</p>
             </div>
           </div>
@@ -400,11 +453,43 @@
             </p>
             <p>Ejemplo</p>
             <div class="code-container">
-              <p>const saludar = (nombre) => {</p>
-              <p>&nbsp;&nbsp;&nbsp;console.log(`Hola ${nombre}`);</p>
-              <p>}</p>
+              <p>
+                <span class="variable">const</span> saludar = (nombre) =>
+                <span class="llave">{</span>
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;<span class="console">console.log</span>(`Hola
+                $<span class="llave">{</span>nombre<span class="llave">}</span
+                >`);
+              </p>
+              <p><span class="llave">}</span></p>
               <p>saludar("Juan");</p>
             </div>
+          </div>
+        </div>
+        <div class="document-container">
+          <div id="arrow-function-inline">
+            <h2>Arrow Function Inline</h2>
+            <p>
+              basicamente es un arrow que solo ejecuta un linea de codigo, ojo
+              el return no hace falta porque esta implicito
+            </p>
+            <p>Ejemplo</p>
+            <div class="code-container">
+              <p>
+                <span class="variable">const</span> saludar = nombre =>
+                <span class="console">console.log</span>(`Hola $<span
+                  class="llave"
+                  >{</span
+                >nombre<span class="llave">}</span>`);
+              </p>
+              <p>saludar("Juan");</p>
+            </div>
+            <p>
+              <span class="important">Importante: </span>
+              Si tenemos solo un parametro en la funcion no hace falta poner los
+              parentesis
+            </p>
           </div>
         </div>
       </div>

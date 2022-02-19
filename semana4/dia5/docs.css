@@ -92,3 +92,21 @@ body {
   padding: 2px;
   border-radius: 6px;
 }
+
+.variable {
+  color: rgb(190, 0, 207);
+  font-weight: 600;
+  padding: 0;
+}
+
+.llave {
+  color: rgb(151, 161, 0);
+  font-weight: 600;
+  padding: 0;
+}
+
+.console {
+  color: rgb(52, 163, 0);
+  font-weight: 600;
+  padding: 0;
+}
