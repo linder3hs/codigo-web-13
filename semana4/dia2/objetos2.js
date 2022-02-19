@@ -44,6 +44,8 @@ const computadora = {
   },
 };
 
+Math
+
 const computadora2 = {
   color: "amarillo",
   marca: "Lenovo",
