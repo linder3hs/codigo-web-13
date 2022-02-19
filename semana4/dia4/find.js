@@ -155,5 +155,4 @@ console.log(arrayLaptops);
 
 // object.entries
 
-
 console.log("nombreDesdeRepaso", nombreDesdeRepaso);
