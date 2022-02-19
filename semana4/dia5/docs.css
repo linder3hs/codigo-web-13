@@ -9,5 +9,27 @@ body {
 
 .grid-container {
   display: grid;
-  
+  grid-template-columns: 300px auto;
+  grid-template-rows: 100px auto;
+  height: 100vh;
+  grid-template-areas:
+    "menu   navbar"
+    "menu   content";
+}
+
+.grid-container div {
+  border: solid 1px #ccc;
+}
+
+.item1 {
+  grid-area: menu;
+  background-color: #0a192a;
+}
+.item2 {
+  grid-area: navbar;
+  background-color: #0a192a;
+}
+.item3 {
+  grid-area: content;
+  background-color: #0a192a;
 }
