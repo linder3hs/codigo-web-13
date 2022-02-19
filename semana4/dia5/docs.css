@@ -73,6 +73,7 @@ body {
   border-radius: 6px;
   width: 70%;
   margin-left: 12px;
+  font-family: "Inconsolata", monospace;
 }
 
 .logo-container {
@@ -107,6 +108,12 @@ body {
 
 .console {
   color: rgb(52, 163, 0);
+  font-weight: 600;
+  padding: 0;
+}
+
+.equal {
+  color: aquamarine;
   font-weight: 600;
   padding: 0;
 }
