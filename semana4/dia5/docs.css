@@ -52,10 +52,15 @@ body {
 .item2 {
   grid-area: navbar;
   background-color: #0a192a;
+  position: fixed;
+  width: calc(100% - 300px);
+  right: 0;
 }
+
 .item3 {
   grid-area: content;
   background-color: #0a192a;
+  overflow: auto;
 }
 
 .document-container {
