@@ -43,6 +43,10 @@ newDivContent.forEach((element) => {
  */
 //* Esta variable solo sera dedicada para mi email
 const inputEmail = document.getElementById("input_email");
+console.log("===========================");
+console.log(inputEmail);
+console.log("===========================");
+
 // de esta forma estoy accediendo al value de mi input
 inputEmail.style.backgroundColor = "#f01";
 console.log(inputEmail.value);
@@ -53,3 +57,15 @@ const inputPassword = document.getElementById("input_password");
 inputPassword.style.backgroundColor = "#000";
 inputPassword.style.color = "#fff";
 console.log("password", inputPassword.value);
+
+/**
+ * * Vamos a obtener elemeos por su class
+ * * en JS al class se traduce como className
+ */
+
+const inputsName = document.getElementsByClassName("input_name");
+console.log(inputsName);
+const newInputsName = Array.from(inputsName);
+newInputsName.forEach((input) => {
+  console.log(input.value);
+});
