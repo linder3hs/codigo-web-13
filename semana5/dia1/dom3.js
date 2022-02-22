@@ -53,6 +53,15 @@ inputs.map((input) => {
   // debo agregarlo a mi lista
   ul.appendChild(li);
 });
-
 // como mi lista esta entonces ahora necesita agregar a mi contenedor
 contenedor.appendChild(ul);
+
+// para acceder a todo el body
+const body = document.body;
+body.style.backgroundColor = "yellow";
+body.style.fontFamily = "Helvetica";
+
+// head
+const head = document.head;
+
+//! Podemos decir en JS todo es un objeto
