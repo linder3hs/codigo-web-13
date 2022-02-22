@@ -64,8 +64,13 @@ console.log("password", inputPassword.value);
  */
 
 const inputsName = document.getElementsByClassName("input_name");
+
 console.log(inputsName);
 const newInputsName = Array.from(inputsName);
 newInputsName.forEach((input) => {
   console.log(input.value);
 });
+
+const buttons = document.getElementsByClassName("btn_registro");
+
+console.log(button);
