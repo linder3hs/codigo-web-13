@@ -17,16 +17,42 @@ document.write("Hola mundo3");
  * 2) Insertar elemenos dentro de mi lista li
  */
 
-const containerList = document.querySelector("#container-list");
-//? JS tiene una funcion llamada createElement la cual me permite crear elementos de html
+// const containerList = document.querySelector("#container-list");
+// //? JS tiene una funcion llamada createElement la cual me permite crear elementos de html
+// const ul = document.createElement("ul");
+// ul.className = "lista";
+
+// const inputs = Array.from(document.querySelectorAll("input"));
+
+// inputs.map((input) => {
+//   const li = document.createElement("li");
+//   const contenido = document.createTextNode(input.value);
+//   li.appendChild(contenido);
+//   ul.appendChild(li);
+// });
+
+// console.log(ul);
+// containerList.appendChild(ul);
+
+//* Retos: Quiero crear una lista con los datos que tengo en los inputs
+const inputs = Array.from(document.querySelectorAll("input"));
+// obtener a mi contenedor
+const contenedor = document.querySelector("#container-list");
+// vamos a crear un ul desde JS
 const ul = document.createElement("ul");
-ul.className = "lista";
-const li1 = document.createElement("li");
-const contenido = document.createTextNode("BMW M4");
-//* ahora debemos agregar el contenido a li1 y luego agregar li1 a ul
-//* En JS existe la funcion appendChild la cual permite agregar un elemento a otro
-li1.appendChild(contenido);
-console.log(li1);
-ul.appendChild(li1);
-console.log(ul);
-containerList.appendChild(ul);
+// ahora debo llenar mi lista, para poder llenar mi lista debo convertir mi NodeList
+// a un array
+inputs.map((input) => {
+  // en la iteracion debo crear cada elemento de mi lista
+  const li = document.createElement("li");
+  // debo crear el valor de mi li, que es input.value
+  // createTextNode: Crea los valores para elementos html
+  const elementText = document.createTextNode(input.value);
+  // ahora debo insertar el valor en mi li
+  li.appendChild(elementText);
+  // debo agregarlo a mi lista
+  ul.appendChild(li);
+});
+
+// como mi lista esta entonces ahora necesita agregar a mi contenedor
+contenedor.appendChild(ul);
