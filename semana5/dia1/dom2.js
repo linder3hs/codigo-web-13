@@ -25,7 +25,7 @@ console.log(form);
  * * querySelectorAll : Permite obtener mas de un elemento a la vez
  */
 
-// esto retorna un NodeList y es compatible con forEach
+//? esto retorna un NodeList y es compatible con forEach
 const inputs = document.querySelectorAll("input");
 console.log(inputs);
 //* quiero filtrar a los inputs que sean de tipo text
@@ -44,3 +44,6 @@ const arrayConvertidoFilter = arrayConvertidoInputs.filter(
   (input) => input.type === "text"
 );
 console.log("arrayConvertidoFilter", arrayConvertidoFilter);
+
+
+
