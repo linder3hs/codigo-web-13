@@ -27,3 +27,12 @@ const form = document.getElementsByTagName("form");
 
 // accedan al boton
 const button = document.getElementsByTagName("button");
+
+const divContent = document.getElementsByTagName("div");
+console.log("DivContent", divContent);
+const newDivContent = Array.from(divContent);
+console.log(newDivContent);
+newDivContent.forEach((element) => {
+  // aca solo quiero que imprima algo en consola
+  console.log(element);
+});
