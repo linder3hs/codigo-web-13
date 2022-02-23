@@ -7,8 +7,6 @@ function sumar() {
   const numero1 = document.querySelector("#numero1").value;
   const numero2 = document.querySelector("#numero2").value;
 
-  console.log(numero1);
-  console.log(numero2);
   //contenedor para imprimir mi resultado
   const contenedor = document.querySelector("#resultado");
 
