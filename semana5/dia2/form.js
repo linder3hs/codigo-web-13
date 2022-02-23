@@ -27,6 +27,8 @@ function validarCorreo(event) {
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   //* regex tiene la propiedad test me permite validar si es correcto y esto retorna true y false
   const emailError = document.querySelector("#email-error");
+
+  //! Si el regex es false entonces hazle un display block al span si no el display sera none
   if (!emailRegex.test(event.target.value)) {
     emailError.style.display = "block";
   } else {

@@ -60,7 +60,11 @@
           type="password"
           name="password"
           placeholder="Ingrese su password"
+          onkeyup="validarPassword(event)"
         />
+        <span id="password-error" class="text-error">
+          El password debe tener al menos 8 digitos
+        </span>
         <input type="text" name="telefono" placeholder="Ingrese su telefono" />
         <button type="submit">Crear Usuario</button>
       </form>
