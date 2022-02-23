@@ -19,3 +19,17 @@ function obtenerValoresDelInput(event) {
 
 // vamos a crear una table de persona cual sea como un registe, es decir tengamos input y con boton
 // se agregue a mi tabla
+
+//* vamos a validar el correo
+// regex es un conjunto de caracteres el cual me dice si un elementos es valido
+function validarCorreo(event) {
+  //* sepan que este regex me va a servir para validar que el correo tenga un formato correcto
+  const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  //* regex tiene la propiedad test me permite validar si es correcto y esto retorna true y false
+  const emailError = document.querySelector("#email-error");
+  if (!emailRegex.test(event.target.value)) {
+    emailError.style.display = "block";
+  } else {
+    emailError.style.display = "none";
+  }
+}

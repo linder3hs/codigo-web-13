@@ -5,21 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./form.css" />
   </head>
   <body>
-    <h1>Eventos de inputs</h1>
+    <!-- <h1>Eventos de inputs</h1>
     <!-- 
       onkeyup: cuando se suelta una tecla
       onkeypress: cuando se presiona una tecla
       onkeydown: cuando se pulsa una tecla y no se suelta
      -->
-    <input
+    <!-- <input
       type="text"
       placeholder="onkeyup"
       onkeyup="console.log(this.value)"
-    />
+    /> -->
 
-    <input
+    <!-- <input
       type="text"
       placeholder="onkeypress"
       onkeypress="console.log(this.value)"
@@ -30,31 +31,40 @@
       placeholder="onkeydown"
       onkeydown="console.log(this.value)"
     />
-    <!-- Estamos event como parametro para poder
-    enviar los valore del teclado a function de JS -->
+    <!-- Estamos event como parametro para poder -->
+    <!-- enviar los valore del teclado a function de JS -->
     <!-- Recuerden que event es solo el nombre del
     parametro, pueden color otro nombre -->
-    <input
+    <!-- <input
       type="text"
       placeholder="Name"
       id="input_name"
       name="nombre"
       onkeyup="obtenerValoresDelInput(event)"
-    />
-
-    <h1>Registro de usuarios</h1>
-    <form action="">
-      <input type="text" name="nombre" placeholder="Ingrese su nombre" />
-      <input type="text" name="apellido" placeholder="Ingrese su apellido" />
-      <input type="text" name="email" placeholder="Ingrese su email" />
-      <input
-        type="password"
-        name="password"
-        placeholder="Ingrese su password"
-      />
-      <input type="text" name="telefono" placeholder="Ingrese su telefono" />
-      <button type="submit">Crear Usuario</button>
-    </form>
+    /> -->
+    <section>
+      <h1>Registro de usuarios</h1>
+      <form action="">
+        <input type="text" name="nombre" placeholder="Ingrese su nombre" />
+        <input type="text" name="apellido" placeholder="Ingrese su apellido" />
+        <input
+          type="text"
+          name="email"
+          placeholder="Ingrese su email"
+          class="input-email"
+          onkeyup="validarCorreo(event)"
+          autocomplete="off"
+        />
+        <span id="email-error" class="text-error">Email incorrect</span>
+        <input
+          type="password"
+          name="password"
+          placeholder="Ingrese su password"
+        />
+        <input type="text" name="telefono" placeholder="Ingrese su telefono" />
+        <button type="submit">Crear Usuario</button>
+      </form>
+    </section>
 
     <script src="./form.js"></script>
   </body>
