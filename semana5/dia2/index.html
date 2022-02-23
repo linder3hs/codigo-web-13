@@ -26,9 +26,13 @@
       ipsam in? Esse odit maxime officia sapiente qui dolorum reiciendis nulla
       saepe.
     </p>
-
+    <!--! this -->
+    <!-- Para poder acceder al elemento padre -->
     <!-- Evento dobleclick: ondblclick -->
-    <button ondblclick="console.log('Evento doble click')">
+    <button
+      ondblclick="console.log('Evento doble click')"
+      onclick="this.style.color = '#f01'"
+    >
       Evento doble click
     </button>
 
