@@ -41,12 +41,14 @@
       <h2>Calculadora basica</h2>
       <input type="text" placeholder="Numero1" id="numero1" />
       <input type="text" placeholder="Numero2" id="numero2" />
-      <button onclick="sumar()">+</button>
-      <button>-</button>
-      <button>*</button>
-      <button>/</button>
+      <button onclick="calculadorHTML('+')">+</button>
+      <button onclick="calculadorHTML('-')">-</button>
+      <button onclick="calculadorHTML('*')">*</button>
+      <button onclick="calculadorHTML('/')">/</button>
       <div id="resultado"></div>
     </div>
+    <!-- Vamos a usar las operaciones en el archivo de eventos -->
+    <script src="./operaciones.js"></script>
     <script src="./eventos.js"></script>
   </body>
 </html>
