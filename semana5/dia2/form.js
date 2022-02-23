@@ -35,3 +35,13 @@ function validarCorreo(event) {
     emailError.style.display = "none";
   }
 }
+
+function validarPassword(event) {
+  const password = event.target.value.length;
+  const passwordError = document.querySelector("#password-error");
+  if (password <= 8) {
+    passwordError.style.display = "block";
+  } else {
+    passwordError.style.display = "none";
+  }
+}
