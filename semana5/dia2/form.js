@@ -34,7 +34,8 @@ function validarCorreo(event) {
   //! Si el regex es false entonces hazle un display block al span si no el display sera none
   if (!emailRegex.test(event.target.value)) {
     emailError.style.display = "block";
-    return false;
+    validacionCorreo = false;
+    validarInputNoVacios();
   } else {
     emailError.style.display = "none";
     validacionCorreo = true;
@@ -47,6 +48,8 @@ function validarPassword(event) {
   const passwordError = document.querySelector("#password-error");
   if (password <= 8) {
     passwordError.style.display = "block";
+    validacionPassword = false;
+    validarInputNoVacios();
   } else {
     passwordError.style.display = "none";
     validacionPassword = true;
@@ -94,15 +97,23 @@ const botonCrearUsuario = document.querySelector("#btn-crear-usuario");
 //! addEventListener
 //* La cual me permite agregar un evento a un mi elemento html
 // este array se va encargar de acumular a los usuarios que registre
-let usuarios = [];
 botonCrearUsuario.addEventListener("click", function (event) {
   // necesito que la pagina no se recargue
   //* Para evitar la pagina se recage usaremos la function preventDefault()
   //* que es una propiedad de event
   event.preventDefault();
   const inputs = document.querySelectorAll("input");
+  const tableBody = document.querySelector("#table-body");
+  //* paso 2 creo un tr
+  const tr = document.createElement("tr");
+
   inputs.forEach((input) => {
-    console.log(input.value);
+    // en cada iteracion creo un td
+    const td = document.createElement("td");
+    const value = document.createTextNode(input.value);
+    td.appendChild(value);
+    tr.appendChild(td);
   });
   //? Necesito obtener los valores de los inputs
+  tableBody.appendChild(tr);
 });
