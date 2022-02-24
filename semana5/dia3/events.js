@@ -2,11 +2,16 @@
 //* La forma de JS moderno me permite agregar los eventos de una forma
 //* mas legible
 const btnPrueba = document.querySelector("#btn-prueba");
+const btnPregunta = document.querySelector("#btn-pregunta");
 
 btnPrueba.onclick = function (event) {
   console.log("click desde el boton");
   console.log(event);
   Swal.fire("Hola mundo");
+};
+
+btnPregunta.onclick = function () {
+  Swal.fire("Alguna pregunta", "Aca el texto de la pregunta", "question");
 };
 
 const paises = document.querySelector("#select-opciones");
