@@ -45,8 +45,18 @@
     <section>
       <h1>Registro de usuarios</h1>
       <form action="">
-        <input type="text" name="nombre" placeholder="Ingrese su nombre" />
-        <input type="text" name="apellido" placeholder="Ingrese su apellido" />
+        <input
+          type="text"
+          name="nombre"
+          onkeyup="validarInputNoVacios()"
+          placeholder="Ingrese su nombre"
+        />
+        <input
+          type="text"
+          name="apellido"
+          onkeyup="validarInputNoVacios()"
+          placeholder="Ingrese su apellido"
+        />
         <input
           type="text"
           name="email"
@@ -65,8 +75,16 @@
         <span id="password-error" class="text-error">
           El password debe tener al menos 8 digitos
         </span>
-        <input type="text" name="telefono" placeholder="Ingrese su telefono" />
-        <button type="submit">Crear Usuario</button>
+        <input
+          type="text"
+          name="telefono"
+          onkeyup="validarInputNoVacios()"
+          placeholder="Ingrese su telefono"
+        />
+        <!--* Cuando un boton es de tipo submit, este boton por default va a regargar la pagina -->
+        <button type="submit" id="btn-crear-usuario" disabled>
+          Crear Usuario
+        </button>
       </form>
     </section>
 
