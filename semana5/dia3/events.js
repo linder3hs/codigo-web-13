@@ -104,8 +104,24 @@ btnAlertCustom.onclick = function () {
     background: `url(${urlMarvel})`,
     color: "#fff",
     backdrop: `
+    rgba(0, 0, 0, 0.3)
     url(https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif)
+    left top
+    no-repeat
     `,
+  });
+};
+
+const btnAlertInput = document.querySelector("#btn-alerta-inputs");
+btnAlertInput.onclick = function () {
+  Swal.fire({
+    title: "Input para email",
+    input: "email",
+    inputLabel: "Ingrese su correo",
+    inputPlaceholder: "El correo debe ser valido",
+  }).then((resultado) => {
+    // obtengo el resultado de lo que escribio el usario en el input
+    console.log(resultado.value);
   });
 };
 
