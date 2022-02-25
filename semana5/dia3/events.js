@@ -57,12 +57,29 @@ btnAlertaBotones.onclick = function () {
   }).then((resultado) => {
     console.log("resultado", resultado);
     if (resultado.isConfirmed) {
+      showAlert("success", "Confirmado", "Se confirmo la operacion");
       console.log("marco la confirmacion");
     }
 
     if (resultado.isDenied) {
       console.log("marco que nel pastel");
     }
+
+    if (resultado.isDismissed) {
+      console.log("marco cancel");
+    }
+  });
+};
+
+const btnAlertNotification = document.querySelector("#btn-alerta-notificacion");
+// 1000 => 1 segundo
+btnAlertNotification.onclick = function () {
+  Swal.fire({
+    position: "top-end", // top, center, top-start, center-start, center-end, bottom, bottom-start, bottom-end
+    icon: "success",
+    title: "Notificacion",
+    showConfirmButton: false,
+    timer: 3000,
   });
 };
 
