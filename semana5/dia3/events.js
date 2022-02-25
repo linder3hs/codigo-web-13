@@ -54,6 +54,15 @@ btnAlertaBotones.onclick = function () {
     showCancelButton: true,
     confirmButtonText: "Guardar",
     denyButtonText: "Nel pastel",
+  }).then((resultado) => {
+    console.log("resultado", resultado);
+    if (resultado.isConfirmed) {
+      console.log("marco la confirmacion");
+    }
+
+    if (resultado.isDenied) {
+      console.log("marco que nel pastel");
+    }
   });
 };
 
