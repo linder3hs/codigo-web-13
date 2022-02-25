@@ -83,6 +83,18 @@ btnAlertNotification.onclick = function () {
   });
 };
 
+const btnAlertaImagen = document.querySelector("#btn-alerta-imagen");
+btnAlertaImagen.onclick = function () {
+  Swal.fire({
+    title: "Imagen",
+    text: "Alerta con imagen",
+    imageUrl:
+      "https://www.cinemascomics.com/wp-content/uploads/2022/02/villanos-marvel-comics-960x720.jpg",
+    imageWidth: 300,
+    imageHeight: 300,
+  });
+};
+
 const paises = document.querySelector("#select-opciones");
 
 // onchange: Sirve para detectar si hay un cambio en mi elemento
