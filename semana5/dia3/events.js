@@ -83,15 +83,29 @@ btnAlertNotification.onclick = function () {
   });
 };
 
+const urlMarvel =
+  "https://www.cinemascomics.com/wp-content/uploads/2022/02/villanos-marvel-comics-960x720.jpg";
 const btnAlertaImagen = document.querySelector("#btn-alerta-imagen");
 btnAlertaImagen.onclick = function () {
   Swal.fire({
     title: "Imagen",
     text: "Alerta con imagen",
-    imageUrl:
-      "https://www.cinemascomics.com/wp-content/uploads/2022/02/villanos-marvel-comics-960x720.jpg",
+    imageUrl: urlMarvel,
     imageWidth: 300,
     imageHeight: 300,
+  });
+};
+
+const btnAlertCustom = document.querySelector("#btn-alerta-custom");
+btnAlertCustom.onclick = function () {
+  Swal.fire({
+    title: "Custom Alert",
+    text: "Alerta customisable",
+    background: `url(${urlMarvel})`,
+    color: "#fff",
+    backdrop: `
+    url(https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif)
+    `,
   });
 };
 
