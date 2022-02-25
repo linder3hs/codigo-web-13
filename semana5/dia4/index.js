@@ -85,6 +85,11 @@ dataForChart.datasets[0].data = [
     y: 10,
     r: 10,
   },
+  {
+    x: 80,
+    y: 10,
+    r: 10,
+  },
 ];
 
 const configBubble = {
@@ -93,3 +98,25 @@ const configBubble = {
 };
 
 const bubbleChart = new Chart(containerBubbleChart, configBubble);
+
+// Polar chart
+const containerPolarChart = document
+  .querySelector("#polar-chart")
+  .getContext("2d");
+
+dataForChart.datasets[0].data = [300, 249, 321, 278];
+
+const configPolar = {
+  type: "polarArea",
+  data: dataForChart,
+};
+
+const polarChart = new Chart(containerPolarChart, configPolar);
+
+const containerRadarChart = document.querySelector("#radar-chart");
+const configRadarChart = {
+  type: "radar",
+  data: dataForChart,
+};
+
+const radarChart = new Chart(containerRadarChart, configRadarChart);
