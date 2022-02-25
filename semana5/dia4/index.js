@@ -120,3 +120,33 @@ const configRadarChart = {
 };
 
 const radarChart = new Chart(containerRadarChart, configRadarChart);
+
+const containerScatterChart = document
+  .querySelector("#scatter-chart")
+  .getContext("2d");
+
+dataForChart.datasets[0].data = [
+  {
+    x: -10,
+    y: 0,
+  },
+  {
+    x: 0,
+    y: 10,
+  },
+  {
+    x: 10,
+    y: 5,
+  },
+  {
+    x: 0.5,
+    y: 5.5,
+  },
+];
+
+const configScatter = {
+  type: "scatter",
+  data: dataForChart,
+};
+
+const scatterChart = new Chart(containerScatterChart, configScatter);
