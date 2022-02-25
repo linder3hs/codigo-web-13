@@ -45,6 +45,18 @@ btnInfo.onclick = function () {
   showAlert("info", "Informacion", "Mensaje informativo de mi alerta");
 };
 
+const btnAlertaBotones = document.querySelector("#btn-alerta-botones");
+btnAlertaBotones.onclick = function () {
+  Swal.fire({
+    title: "Alerta",
+    text: "Texto de alerta",
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: "Guardar",
+    denyButtonText: "Nel pastel",
+  });
+};
+
 const paises = document.querySelector("#select-opciones");
 
 // onchange: Sirve para detectar si hay un cambio en mi elemento
