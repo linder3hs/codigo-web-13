@@ -23,6 +23,9 @@ const form = document.querySelector("#section-login");
 const titleEmail = document.querySelector("#email");
 const titlePassword = document.querySelector("#password");
 
+const btnCerrarSession = document.querySelector("#cerrar-session");
+const usuarioSection = document.querySelector("#usuario-logged");
+
 if (email !== "" && password !== "") {
   // El usario ya esta logueado
   // Si el usario esta logueado voy a ocultar el form
