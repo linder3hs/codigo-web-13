@@ -40,10 +40,66 @@
                   gap-2
               -->
               <div class="mt-3 d-grid gap-2">
-                <button class="btn btn-primary">Iniciar Session</button>
+                <button class="btn btn-outline-primary">Iniciar Session</button>
               </div>
               <div class="mt-3">
-                <button class="btn btn-link">Crear cuenta</button>
+                <button
+                  class="btn btn-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalRegistro"
+                >
+                  Crear cuenta
+                </button>
+              </div>
+              <div
+                class="modal fade"
+                id="modalRegistro"
+                tabindex="-1"
+                area-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Registro de usuario</h5>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mt-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Ingrese su nombre"
+                        />
+                      </div>
+                      <div class="mt-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Ingrese su apellido"
+                        />
+                      </div>
+                      <div class="mt-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          placeholder="Ingrese su correo"
+                        />
+                      </div>
+                      <div class="mt-3">
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Ingrese su password"
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-danger" data-bs-dismiss="modal">
+                        Cerrar
+                      </button>
+                      <button class="btn btn-success">Guardar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
