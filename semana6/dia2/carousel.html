@@ -21,7 +21,24 @@
       <!-- https://i.blogs.es/1aad84/marvel/1366_2000.jpeg -->
       <!-- https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/peliculas-marvel-1585557673.jpg -->
       <!-- https://okdiario.com/img/2019/08/28/peliculas-marvel.jpeg -->
-      <div id="controls" class="carousel slide" data-bs-ride="carousel">
+      <!-- data-bs : data-bootstrap -->
+      <div
+        id="controls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        style="width: 50%"
+      >
+        <!-- Agregando indicadores -->
+        <div class="carousel-indicators">
+          <button
+            data-bs-target="#controls"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button data-bs-target="#controls" data-bs-slide-to="1"></button>
+          <button data-bs-target="#controls" data-bs-slide-to="2"></button>
+        </div>
+
         <!-- Dentro de carousel-inner vamos a tener los elemos que queremos mostrar, cada elemento
         debe estar separador por div -->
         <!-- active es para indicar que elemento esta seleccionado por default -->
@@ -55,6 +72,7 @@
           class="carousel-control-prev"
           data-bs-target="#controls"
           data-bs-slide="prev"
+          style="background-color: rgb(228, 77, 77)"
         >
           <span class="carousel-control-prev-icon"></span>
           <span>Preview</span>
@@ -64,8 +82,9 @@
           class="carousel-control-next"
           data-bs-target="#controls"
           data-bs-slide="next"
+          style="background-color: rgba(45, 253, 156, 0.9)"
         >
-          <span class="text-primary">Next</span>
+          <span>Next</span>
           <span class="carousel-control-next-icon text-primary"></span>
         </button>
       </div>
