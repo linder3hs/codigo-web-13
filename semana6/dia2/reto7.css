@@ -1,0 +1,13 @@
+body {
+  font-family: "Fredoka", sans-serif;
+  background-color: #1c253f;
+}
+
+section {
+  color: #fff;
+}
+
+.bg-blue-dark {
+  background-color: rgb(34, 50, 107);
+  border-radius: 12px;
+}
