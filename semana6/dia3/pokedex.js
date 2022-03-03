@@ -20,16 +20,18 @@ const setPokemonsInView = (results) => {
   const imgUrl =
     "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/";
 
-  results.map((result, index) => {
+  results.map(async (result, index) => {
     // Por cada iteracion crea la variable html con el contendi de div que ocupa el
     // 25% porque usa col-md-3
     // dentro creo otro con la clase card y dentro del creo al card-body
 
     // cuando index = 0 + 1
     // index = 1 + 1
+    const bgColor = await getColorPokemon(index + 1);
+    console.log("bgColor", bgColor);
     const html = `
       <div class="col-md-3 mt-3">
-        <div class='card'>
+        <div class='card' style='background-color: ${bgColor};'>
           <img 
             class='card-img-top mt-2'
             width='100'
@@ -61,3 +63,19 @@ const obtenerDetallePokemon = async (url) => {
 
 // llamamos a la funcion
 obtenerPokemones();
+
+const getColorPokemon = async (id) => {
+  const response = await fetch(
+    `https://pokeapi.co/api/v2/pokemon-species/${id}`
+  );
+
+  const data = await response.json();
+
+  const color = {
+    red: "rgba(255, 48, 50, 0.7)",
+    green: "rgba(83, 180, 50, 0.7)",
+    blue: "rgba(113, 104, 226, 0.7)",
+  };
+
+  return color[data.color.name];
+};
