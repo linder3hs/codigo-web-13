@@ -8,7 +8,7 @@ const pokemonName = document.querySelector("#pokemon-name");
 
 // vamos a crear una funcion para obtener los datos
 const obtenerPokemones = async () => {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=50");
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=100");
   const data = await response.json();
 
   console.log(data.results);
