@@ -67,6 +67,13 @@ githubActionSearch.onclick = () => {
   obtenerDatosGitHub(username);
 };
 
+// vamos a detectar el evento de enter cuando estemos en el input
+githubInputSearch.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    obtenerDatosGitHub(event.target.value);
+  }
+});
+
 // El valor linder3hs solo sera valido cuando usuername este vacio
 const obtenerDatosGitHub = async (username = "linder3hs") => {
   //* En este ejemplo await esta haciendo lo siguiente
