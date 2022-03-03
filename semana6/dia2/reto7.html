@@ -32,6 +32,7 @@
         <div class="row">
           <div class="col-md-10">
             <input
+              id="github-search"
               type="text"
               class="form-control"
               placeholder="Buscar usuario"
@@ -39,7 +40,9 @@
           </div>
           <div class="col-md-2">
             <div class="d-grid gap-2">
-              <button class="btn btn-primary">Search</button>
+              <button id="github-action-search" class="btn btn-primary">
+                Search
+              </button>
             </div>
           </div>
           <div class="col-md-12 mt-4">
@@ -59,12 +62,14 @@
                   <div class="col-md-10">
                     <div class="row">
                       <div class="col-md-6">
-                        <h4>The Octocat</h4>
-                        <p class="text-primary">@octocat</p>
-                        <p>This profile has no bio</p>
+                        <h4 id="github-name">The Octocat</h4>
+                        <p id="github-username" class="text-primary">
+                          @octocat
+                        </p>
+                        <p id="github-bio">This profile has no bio</p>
                       </div>
                       <div class="col-md-6 text-end">
-                        <p>Joined 25 Jun 2011</p>
+                        <p id="github-joined">Joined 25 Jun 2011</p>
                       </div>
                       <div class="col-md-12">
                         <div class="card">
@@ -72,15 +77,15 @@
                             <div class="row">
                               <div class="col-md-4">
                                 <p>Repos</p>
-                                <h4>8</h4>
+                                <h4 id="github-repos">8</h4>
                               </div>
                               <div class="col-md-4">
                                 <p>Followers</p>
-                                <h4>3938</h4>
+                                <h4 id="github-followers">3938</h4>
                               </div>
                               <div class="col-md-4">
                                 <p>Following</p>
-                                <h4>9</h4>
+                                <h4 id="github-following">9</h4>
                               </div>
                             </div>
                           </div>
@@ -90,25 +95,29 @@
                         <div class="row">
                           <div class="col-md-6">
                             <p>
-                              <i class="fa-solid fa-location-dot"></i>&nbsp;San
-                              Francisco
+                              <!-- fa: font awesome: Es nuestra libreria de iconos -->
+                              <i class="fa-solid fa-location-dot"></i>&nbsp;
+                              <span id="github-location"> San Francisco</span>
                             </p>
                           </div>
                           <div class="col-md-6">
                             <p>
-                              <i class="fa-brands fa-twitter"></i>&nbsp;Not
-                              available
+                              <i class="fa-brands fa-twitter"></i>&nbsp;
+                              <span id="github-twitter"> Not available</span>
                             </p>
                           </div>
                           <div class="col-md-6">
                             <p>
-                              <i class="fa-solid fa-link"></i
-                              >&nbsp;https://github.com
+                              <i class="fa-solid fa-link"></i>&nbsp;
+                              <span id="github-url"> https://github.com</span>
                             </p>
                           </div>
                           <div class="col-md-6">
                             <p>
-                              <i class="fa-solid fa-building"></i>&nbsp;@github
+                              <i class="fa-solid fa-building"></i>&nbsp;<span
+                                id="github-build"
+                                >@github</span
+                              >
                             </p>
                           </div>
                         </div>
@@ -127,6 +136,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./github.js"></script>
   </body>
 </html>
