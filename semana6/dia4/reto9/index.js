@@ -209,3 +209,8 @@ selectLanguage.onchange = function (event) {
 };
 
 renderJobs();
+
+// son 9 retos que hemos en clase
+// + 1 pokedex
+// + 1 star wars
+// + 1 su portafolio
