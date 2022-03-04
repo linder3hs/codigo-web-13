@@ -47,3 +47,8 @@ h1 {
 .danger {
   @include alertita($bg: rgb(255, 110, 110));
 }
+
+// ASI COMO LOS MIXIN retornan una porcio tambien pueden retornar una clase directo
+@mixin generate-icons($name, $icon, $color, $size) {
+  
+}
