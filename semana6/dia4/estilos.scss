@@ -49,6 +49,32 @@ h1 {
 }
 
 // ASI COMO LOS MIXIN retornan una porcio tambien pueden retornar una clase directo
-@mixin generate-icons($name, $icon, $color, $size) {
-  
+// El proposito de esto es genera codigo completo es decir desde la creacion de su clase
+@mixin generate-icons($name, $icon, $color, $size: 1200px) {
+  // de esta forma concatenamos un texto con una variable en SASS
+  .div-icon-#{$name} {
+    background: url("./images/#{$icon}");
+    border: solid 2px $color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: $size;
+    height: $size;
+  }
+}
+
+@include generate-icons("phone", "phone.jpeg", rgb(252, 135, 143), 400px);
+@include generate-icons("mail", "mail.jpeg", rgb(164, 226, 123), 200px);
+@include generate-icons("search", "search.png", rgb(50, 163, 255), 400px);
+@include generate-icons("laptop", "laptop.png", rgb(215, 83, 255), 400px);
+
+// vamos a crear un bucle usando SASS
+// SASS Tambien tiene un for
+
+// Esto es un bucle que inicia en 1 y termina en 5
+@for $iteracion from 1 through 10 {
+  // vamos a crear 5 container
+  .container-#{$iteracion} {
+    background-color: rgb($iteracion + 104, $iteracion + 32, $iteracion + 54);
+    height: 200px * $iteracion / 2;
+  }
 }
