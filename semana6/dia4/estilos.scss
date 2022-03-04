@@ -15,3 +15,35 @@ h1 {
   padding: $padding-1;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+//* mixins en SASS
+//* Son un tipo de funcion la cual nos permite
+//* almacenar un codigo y poder reutilizarlo
+//* podemos pasarle variable
+
+//* La idea pasar esto a un mixin y el color de fondo sea una variable
+// El nombre puede ser cualquiera
+@mixin alertita($bg: green) {
+  background-color: $bg;
+  padding: $padding-1;
+  border-radius: $padding-1;
+  color: #fff;
+  margin-bottom: $padding-1;
+}
+
+.success {
+  // aca en vez de hacer el estilo una y otra solo deberia llamar al mixin
+  @include alertita;
+}
+
+.info {
+  @include alertita($bg: rgb(37, 194, 241));
+}
+
+.warning {
+  @include alertita($bg: rgb(229, 245, 87));
+}
+
+.danger {
+  @include alertita($bg: rgb(255, 110, 110));
+}

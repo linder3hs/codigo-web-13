@@ -10,4 +10,36 @@ h1 {
   padding: 10px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+.success {
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.info {
+  background-color: #25c2f1;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.warning {
+  background-color: #e5f557;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.danger {
+  background-color: #ff6e6e;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
 /*# sourceMappingURL=estilos.css.map */
