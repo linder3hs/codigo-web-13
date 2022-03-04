@@ -23,11 +23,11 @@ h1 {
 
 //* La idea pasar esto a un mixin y el color de fondo sea una variable
 // El nombre puede ser cualquiera
-@mixin alertita($bg: green) {
+@mixin alertita($bg: green, $color-text: #fff) {
   background-color: $bg;
   padding: $padding-1;
   border-radius: $padding-1;
-  color: #fff;
+  color: $color-text;
   margin-bottom: $padding-1;
 }
 
