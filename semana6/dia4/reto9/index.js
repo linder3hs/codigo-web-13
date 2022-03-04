@@ -202,4 +202,10 @@ const renderJobs = () => {
   });
 };
 
+const selectLanguage = document.querySelector("#select-languages");
+// recuerden para los selects debemos utilizar el evento onchange
+selectLanguage.onchange = function (event) {
+  console.log(event.target.value);
+};
+
 renderJobs();
