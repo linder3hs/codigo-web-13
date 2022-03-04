@@ -1,0 +1,16 @@
+// VARIABLES ES SASS
+// * En SASS podemos usar variables para guardar colores primarios, secundarios, extras
+// * medidas que sean repetitivas
+// * fuentes - tipos de letra
+// * logica puede ser mostrar o no objetos
+
+//! La forma en la creamos una variable es usando el $nombreDeVariable: valor
+
+//* En SASS se recomienda que los nombres de las variables esten separados por "-"
+$color-princial: rgb(109, 214, 174);
+$color-red: #f01;
+$padding-1: 10px;
+
+//TODO Esta variable que acabamos de crear la podemos usar en cualquier parte de nuestro archivo
+//? Consejo es recomendable tener un archivo contenga a todas la variable, para poder importarlo
+//? en los distintos archivos de tipo SASS
