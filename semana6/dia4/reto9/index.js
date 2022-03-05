@@ -1,160 +1,14 @@
 const containerJobs = document.querySelector("#container-jobs");
 
-const jobs = [
-  {
-    id: 1,
-    company: "Photosnap",
-    logo: "./images/photosnap.svg",
-    new: true,
-    featured: true,
-    position: "Senior Frontend Developer",
-    role: "Frontend",
-    level: "Senior",
-    postedAt: "1d ago",
-    contract: "Full Time",
-    location: "USA Only",
-    languages: ["HTML", "CSS", "JavaScript"],
-    tools: [],
-  },
-  {
-    id: 2,
-    company: "Manage",
-    logo: "./images/manage.svg",
-    new: true,
-    featured: true,
-    position: "Fullstack Developer",
-    role: "Fullstack",
-    level: "Midweight",
-    postedAt: "1d ago",
-    contract: "Part Time",
-    location: "Remote",
-    languages: ["Python"],
-    tools: ["React"],
-  },
-  {
-    id: 3,
-    company: "Account",
-    logo: "./images/account.svg",
-    new: true,
-    featured: false,
-    position: "Junior Frontend Developer",
-    role: "Frontend",
-    level: "Junior",
-    postedAt: "2d ago",
-    contract: "Part Time",
-    location: "USA Only",
-    languages: ["JavaScript"],
-    tools: ["React", "Sass"],
-  },
-  {
-    id: 4,
-    company: "MyHome",
-    logo: "./images/myhome.svg",
-    new: false,
-    featured: false,
-    position: "Junior Frontend Developer",
-    role: "Frontend",
-    level: "Junior",
-    postedAt: "5d ago",
-    contract: "Contract",
-    location: "USA Only",
-    languages: ["CSS", "JavaScript"],
-    tools: [],
-  },
-  {
-    id: 5,
-    company: "Loop Studios",
-    logo: "./images/loop-studios.svg",
-    new: false,
-    featured: false,
-    position: "Software Engineer",
-    role: "Fullstack",
-    level: "Midweight",
-    postedAt: "1w ago",
-    contract: "Full Time",
-    location: "Worldwide",
-    languages: ["JavaScript"],
-    tools: ["Ruby", "Sass"],
-  },
-  {
-    id: 6,
-    company: "FaceIt",
-    logo: "./images/faceit.svg",
-    new: false,
-    featured: false,
-    position: "Junior Backend Developer",
-    role: "Backend",
-    level: "Junior",
-    postedAt: "2w ago",
-    contract: "Full Time",
-    location: "UK Only",
-    languages: ["Ruby"],
-    tools: ["RoR"],
-  },
-  {
-    id: 7,
-    company: "Shortly",
-    logo: "./images/shortly.svg",
-    new: false,
-    featured: false,
-    position: "Junior Developer",
-    role: "Frontend",
-    level: "Junior",
-    postedAt: "2w ago",
-    contract: "Full Time",
-    location: "Worldwide",
-    languages: ["HTML", "JavaScript"],
-    tools: ["Sass"],
-  },
-  {
-    id: 8,
-    company: "Insure",
-    logo: "./images/insure.svg",
-    new: false,
-    featured: false,
-    position: "Junior Frontend Developer",
-    role: "Frontend",
-    level: "Junior",
-    postedAt: "2w ago",
-    contract: "Full Time",
-    location: "USA Only",
-    languages: ["JavaScript"],
-    tools: ["Vue", "Sass"],
-  },
-  {
-    id: 9,
-    company: "Eyecam Co.",
-    logo: "./images/eyecam-co.svg",
-    new: false,
-    featured: false,
-    position: "Full Stack Engineer",
-    role: "Fullstack",
-    level: "Midweight",
-    postedAt: "3w ago",
-    contract: "Full Time",
-    location: "Worldwide",
-    languages: ["JavaScript", "Python"],
-    tools: ["Django"],
-  },
-  {
-    id: 10,
-    company: "The Air Filter Company",
-    logo: "./images/the-air-filter-company.svg",
-    new: false,
-    featured: false,
-    position: "Front-end Dev",
-    role: "Frontend",
-    level: "Junior",
-    postedAt: "1mo ago",
-    contract: "Part Time",
-    location: "Worldwide",
-    languages: ["JavaScript"],
-    tools: ["React", "Sass"],
-  },
-];
+// vamos a hacer un cambio, para poder reutilizar la funcion renderJobs, hare que como parametro reciba el
+// array de objetos
 
-const renderJobs = () => {
-  jobs.map((job) => {
+const renderJobs = (arrayObjectJobs) => {
+  // Esto esta indicando que como primer paso limpie el contenedor
+  containerJobs.innerHTML = "";
+  //! y luego haga el nuevo render de los elementos
+  //! como estamos recibiendo el array de objetos como parametro tengo que usar ese parametro en vez de jobs
+  arrayObjectJobs.map((job) => {
     const html = `
     <section class="card">
         <div class="column-1">
@@ -205,12 +59,20 @@ const renderJobs = () => {
 const selectLanguage = document.querySelector("#select-languages");
 // recuerden para los selects debemos utilizar el evento onchange
 selectLanguage.onchange = function (event) {
-  console.log(event.target.value);
+  const techFilter = event.target.value;
+
+  // el reto es poder obtener el lenguaje y poder filtrar y obtener solo los trabajos que corresponda
+  //? Como la funcion renderJobs recibe como parametro un arraydeobjetos es lo que debemos
+  //? generar una vez hecho el filtro
+  const newJobs = jobs.filter(
+    (job) =>
+      job.languages.includes(techFilter) || job.tools.includes(techFilter)
+  );
+  renderJobs(newJobs);
+  //? Para que no esto funcion bien yo debeo decirle a la funcion renderJobs que cada vez
+  //? que la invoque primero limpie el contenedor y luego haga el render el array de objetos
 };
 
-renderJobs();
-
-// son 9 retos que hemos en clase
-// + 1 pokedex
-// + 1 star wars
-// + 1 su portafolio
+//! que le pasamos a renderJobs?
+//jobs esta siendo importando desde el archivo jobs.js
+renderJobs(jobs);
