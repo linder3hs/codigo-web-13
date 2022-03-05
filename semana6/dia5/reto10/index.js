@@ -3,27 +3,27 @@ const containerElements = document.querySelector("#container-elements");
 const obtenerData = async () => {
   const reponse = await fetch("https://rickandmortyapi.com/api/character");
   const data = await reponse.json();
+  console.log(data.results);
   renderData(data.results);
 };
 
 const showDetail = async (characterUrl) => {
   // console.log(character);
-  const url = "/semana6/dia5/reto10/detalle.html";
-
   const response = await fetch(characterUrl);
   const data = await response.json();
-
+  console.log("character", data);
   // como poder guardar un objeto en localStorage
   // JSON.Stringfy => Permite parsear un JSON a un string
   // de esta formar podemos guardar un objeto en localStorage
   // localStorage.setItem("img", data.image);
   localStorage.setItem("character", JSON.stringify(data));
 
+  const url = "/semana6/dia5/reto10/detalle.html";
   window.location.href = url;
 };
 
-const renderData = (data) => {
-  data.map((character) => {
+const renderData = (characters) => {
+  characters.map((character) => {
     const html = `
     <div class="col-md-3 mb-5">
           <div class="card link" onclick="showDetail('${character.url}')">
