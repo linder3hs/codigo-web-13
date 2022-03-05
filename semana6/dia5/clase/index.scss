@@ -6,15 +6,12 @@ $text-dark: rgb(255, 255, 255);
 $bg-light: rgb(31, 255, 162);
 $text-light: rgb(0, 0, 0);
 
-body[data-mode="light"] {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: $bg-light;
-  color: $text-light;
+@mixin theme($mode, $color, $bg) {
+  body[data-mode="#{$mode}"] {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: $bg;
+    color: $color;
+  }
 }
-
-body[data-mode="dark"] {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: $bg-light;
-  background-color: $bg-dark;
-  color: $text-dark;
-}
+@include theme("light", $text-light, $bg-light);
+@include theme("dark", $text-dark, $bg-dark);
