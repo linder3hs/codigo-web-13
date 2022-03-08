@@ -10,3 +10,25 @@ body {
 .img-logo {
   width: 150px;
 }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li a {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  display: block;
+  color: #999;
+  text-decoration: none;
+}
+
+.img-profile {
+  width: 70px;
+  height: 70px;
+  border: solid;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 50px;
+}
