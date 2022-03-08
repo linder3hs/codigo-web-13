@@ -1,0 +1,12 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.border-right {
+  border-right: 1px solid #ddd;
+  height: 100vh;
+}
+
+.img-logo {
+  width: 150px;
+}

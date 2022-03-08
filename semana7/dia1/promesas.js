@@ -123,3 +123,8 @@ validacionAsync();
 // 404 => Es el error que muestra cuando no encuentra la url, es decir la direccion no existe
 // 500 => Es el error que retorna cuando hay un problema en el servidor
 // 512 => Es un error de espacio en el servidor
+
+//* GET  => Obtener datos (informacion)
+//* POST => Enviar/Crear datos
+//* PUT => Actualizar datos
+//* DELETE => Borrar/Eliminar datos
