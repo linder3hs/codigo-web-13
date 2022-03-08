@@ -97,3 +97,29 @@ validacionAsync();
 
 // !Recomendacion
 //* Siempre que hagamos una peticion acompañemos de un try catch
+
+// Ejemplo real
+// const getUserGitHub = async () => {
+//   try {
+//     const response = await fetch("https://api.github.com/users/cvxcvxcv");
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// };
+// getUserGitHub();
+
+// veamos un poco de lo que es un status code
+// un status code es un numero que retorna una peticion
+// 200, 500, 401, 403, 404, 201, 512
+// Si una peticion nos devuelve un status que sea 200, 201
+// que la respuesta es ok
+// 200 = ok
+// 201 = ok y ademas significa que algo ha sido creado
+
+// Si la url response un 500, 404, 512
+// Hay un error
+// 404 => Es el error que muestra cuando no encuentra la url, es decir la direccion no existe
+// 500 => Es el error que retorna cuando hay un problema en el servidor
+// 512 => Es un error de espacio en el servidor
