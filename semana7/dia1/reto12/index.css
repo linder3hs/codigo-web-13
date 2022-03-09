@@ -25,10 +25,29 @@ li a {
 }
 
 .img-profile {
-  width: 70px;
-  height: 70px;
-  border: solid;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   border-radius: 50%;
   margin-right: 50px;
+}
+
+.gender-movie {
+  color: rgb(246, 66, 66);
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 0.9em;
+  color: rgb(0, 68, 156);
+}
+
+.subtitle {
+  font-size: 0.8em;
+  color: #999;
 }
