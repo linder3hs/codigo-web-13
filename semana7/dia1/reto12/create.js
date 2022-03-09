@@ -2,6 +2,7 @@
 const btnCrear = document.querySelector("#btn-crear");
 const inputs = document.querySelectorAll("input");
 const selectGender = document.querySelector("#select-gender");
+const URL = "https://6226bedf2dfa5240180c3e36.mockapi.io/fiction_movies";
 // vamos a crear una variable la cual se encargue de almacenar el valor del onchange
 // del select
 let valueGender = "";
@@ -10,7 +11,7 @@ selectGender.onchange = function (event) {
   valueGender = event.target.value;
 };
 
-btnCrear.onclick = function (event) {
+btnCrear.onclick = async function (event) {
   // como evitamos que la pagina se recargue
   event.preventDefault();
   // al momento de dar click debo obtener el valor de los inputs
@@ -35,5 +36,18 @@ btnCrear.onclick = function (event) {
     video_link: values.movie_video,
   };
 
-  console.log(movie);
+  // Ahora vamos a ejecutar una peticion con el motodo POST porque vamos a crear algo
+  // Sabemos que por default el fetch es de metodo GET
+  // ahora para cambiarlos a un POST necesitamos pasarle un objeto indicando su METODO
+  // al decirle que method ahora es POST automaticamente podremos pasarle un body
+  // body: Es el objeto que vamos a enviar al servidor para que pueda ser creado
+  // body solo recibe strings
+  const response = await fetch(URL, {
+    method: "POST",
+    body: JSON.stringify(movie),
+  });
+
+  const data = await response.json();
+
+  console.log("data", data);
 };
