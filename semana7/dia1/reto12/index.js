@@ -52,7 +52,7 @@ const renderMovies = (arregloPeliculas, titulo) => {
         ${arregloPeliculas.map(
           (pelicula) =>
             `<div class="col-md-3">
-            <video controls muted poster=${pelicula.wallpaper} class="video">
+            <video onmouseover="this.play()" onmouseout="this.pause()" controls muted poster=${pelicula.wallpaper} class="video">
               <source src=${pelicula.video_link} />
             </video>
             <h5 class="title">${pelicula.name}</h5>
@@ -63,7 +63,7 @@ const renderMovies = (arregloPeliculas, titulo) => {
     </div>
       `;
 
-  containerMovies.innerHTML += html;
+  containerMovies.innerHTML += html.replaceAll(",", "");
 };
 
 groupMovies();
