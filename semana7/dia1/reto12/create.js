@@ -14,8 +14,26 @@ btnCrear.onclick = function (event) {
   // como evitamos que la pagina se recargue
   event.preventDefault();
   // al momento de dar click debo obtener el valor de los inputs
+  const values = {};
+  // Esto sirve para poder agregar un elemento a un objeto
+  // values["key"] = "value"
+  // values = {
+  //  "key": "value"
+  // }
+
   inputs.forEach((input) => {
-    console.log(input.value);
+    values[input.name] = input.value;
   });
-  console.log("valueGender", valueGender);
+
+  // para poder crear nuestro elemento en el API necesitamos armar un objeto
+  // este objeto sera que el que enviaremos al API para que pueda crear una nueva pelicuala
+  const movie = {
+    name: values.movie_name,
+    director: values.movie_director,
+    wallpaper: values.movie_photo,
+    gender: valueGender,
+    video_link: values.movie_video,
+  };
+
+  console.log(movie);
 };
