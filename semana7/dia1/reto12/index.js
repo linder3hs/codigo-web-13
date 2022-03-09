@@ -47,7 +47,9 @@ const containerMovies = document.querySelector("#container-videos");
 const renderMovies = (arregloPeliculas, titulo) => {
   const html = `
     <div class="col-md-12 mt-3">
-        <h4 class="gender-movie">${titulo}</h4>
+        <h4 class="gender-movie">
+        ${arregloPeliculas.length > 0 ? titulo : ""}
+        </h4>
         <div class="row">
         ${arregloPeliculas.map(
           (pelicula) =>
