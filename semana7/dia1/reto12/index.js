@@ -21,7 +21,49 @@ const groupMovies = async () => {
   const dcMovies = [];
   const ramdonMovies = [];
 
-  
+  // vamos a obtener el arreglo de pelicuas desde la funcion getMovies()
+  const movies = await getMovies();
+
+  movies.forEach((movie) => {
+    // compo podemos extraer el gener si usamos destructuracion?
+    const { gender } = movie;
+    if (gender === "Marvel") {
+      marvelMovies.push(movie);
+    } else if (gender === "DC") {
+      dcMovies.push(movie);
+    } else {
+      ramdonMovies.push(movie);
+    }
+  });
+
+  renderMovies(marvelMovies, "Marvel");
+  renderMovies(dcMovies, "DC");
+  renderMovies(ramdonMovies, "Ramdon");
 };
 
 // y otra funcion que se encargue de renderizar
+const containerMovies = document.querySelector("#container-videos");
+
+const renderMovies = (arregloPeliculas, titulo) => {
+  const html = `
+    <div class="col-md-12 mt-3">
+        <h4 class="gender-movie">${titulo}</h4>
+        <div class="row">
+        ${arregloPeliculas.map(
+          (pelicula) =>
+            `<div class="col-md-3">
+            <video controls muted poster=${pelicula.wallpaper} class="video">
+              <source src=${pelicula.video_link} />
+            </video>
+            <h5 class="title">${pelicula.name}</h5>
+            <p class="subtitle">${pelicula.director}</p>
+          </div>`
+        )}
+        </div>
+    </div>
+      `;
+
+  containerMovies.innerHTML += html;
+};
+
+groupMovies();
