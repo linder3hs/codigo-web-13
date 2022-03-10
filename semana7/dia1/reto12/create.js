@@ -2,7 +2,7 @@
 const btnCrear = document.querySelector("#btn-crear");
 const inputs = document.querySelectorAll("input");
 const selectGender = document.querySelector("#select-gender");
-const URL = "https://6226bedf2dfa5240180c3e36.mockapi.io/fiction_movies";
+const URL = "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies";
 // vamos a crear una variable la cual se encargue de almacenar el valor del onchange
 // del select
 let valueGender = "";
@@ -44,6 +44,10 @@ btnCrear.onclick = async function (event) {
   // body solo recibe strings
   const response = await fetch(URL, {
     method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(movie),
   });
 

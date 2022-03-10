@@ -1,5 +1,5 @@
 // como consumo el API?
-const URL = "https://6226bedf2dfa5240180c3e36.mockapi.io/fiction_movies";
+const URL = "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies";
 
 const getMovies = async () => {
   try {
