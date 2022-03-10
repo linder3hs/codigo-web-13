@@ -44,3 +44,33 @@ const storeMovie = async (movie) => {
     });
   }
 };
+
+// Para poder eliminas un registro solo necesito el ID de este
+const deleteItem = async (id) => {
+  try {
+    //  ahoara debemos hacer un fetch usando el metodo DELETE
+    // profe y donde va el id?
+    // el id va en la url
+    const response = await fetch(`${URL}/${id}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+
+    await response.json();
+
+    Swal.fire({
+      icon: "success",
+      title: "",
+      text: "Se elimino la pelicula",
+    });
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: error.message,
+    });
+  }
+};
