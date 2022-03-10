@@ -51,6 +51,7 @@ const deleteItem = async (id) => {
     //  ahoara debemos hacer un fetch usando el metodo DELETE
     // profe y donde va el id?
     // el id va en la url
+    // ejemplo: "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies/1";
     const response = await fetch(`${URL}/${id}`, {
       method: "DELETE",
       headers: {

@@ -5,7 +5,7 @@ const tableContainer = document.querySelector("#table-container");
 const renderMovies = async () => {
   const movies = await getMovies();
   movies.map((movie) => {
-    const html = `<tr>
+    const html = `<tr id='row_${movie.id}'>
               <td>${movie.name}</td>
               <td>${movie.director}</td>
               <td>${movie.gender}</td>
@@ -38,6 +38,9 @@ const deleteMoivie = async (id) => {
 
   if (result.value) {
     await deleteItem(id);
+    const row = document.querySelector(`#row_${id}`);
+    row.remove();
+    // window.location.reload();
   }
 };
 
