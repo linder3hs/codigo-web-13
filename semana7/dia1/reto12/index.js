@@ -1,16 +1,3 @@
-// como consumo el API?
-const URL = "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies";
-
-const getMovies = async () => {
-  try {
-    const response = await fetch(URL);
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.log(error.message);
-  }
-};
-
 // haremos una funcion que se encargue de agrupar las pelicualas
 const groupMovies = async () => {
   // podemos crear 3 arreglos

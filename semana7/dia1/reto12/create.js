@@ -2,7 +2,6 @@
 const btnCrear = document.querySelector("#btn-crear");
 const inputs = document.querySelectorAll("input");
 const selectGender = document.querySelector("#select-gender");
-const URL = "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies";
 // vamos a crear una variable la cual se encargue de almacenar el valor del onchange
 // del select
 let valueGender = "";
@@ -60,7 +59,7 @@ btnCrear.onclick = async function (event) {
     gender: valueGender,
     video_link: values.movie_video,
   };
-
+  await storeMovie(movie);
   // Ahora vamos a ejecutar una peticion con el motodo POST porque vamos a crear algo
   // Sabemos que por default el fetch es de metodo GET
   // ahora para cambiarlos a un POST necesitamos pasarle un objeto indicando su METODO
@@ -69,31 +68,4 @@ btnCrear.onclick = async function (event) {
   // body solo recibe strings
 
   // Recurden que es recomendable tener un try catch cuando hagamos una peticion
-  try {
-    const response = await fetch(URL, {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(movie),
-    });
-
-    await response.json();
-
-    // Falta limpiar los inputs
-    document.querySelector("form").reset();
-
-    Swal.fire({
-      icon: "success",
-      title: "",
-      text: "Se crear la pelicula",
-    });
-  } catch (error) {
-    Swal.fire({
-      icon: "error",
-      title: "Error",
-      text: error.message,
-    });
-  }
 };
