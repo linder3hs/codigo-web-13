@@ -15,7 +15,7 @@ const renderMovies = async () => {
                   <button class="btn btn-warning">
                     <i class="fas fa-edit"></i>
                   </button>
-                  <button onclick="deleteMoivies()" class="btn btn-danger">
+                  <button onclick="deleteMoivie(${movie.id})" class="btn btn-danger">
                     <i class="fas fa-trash"></i>
                   </button>
                 </div>
@@ -26,23 +26,19 @@ const renderMovies = async () => {
 };
 
 // vamos a crear una funcion que se encargue de eliminar las peliculas
-const deleteMoivies = async () => {
-  Swal.fire({
+const deleteMoivie = async (id) => {
+  const result = await Swal.fire({
     title: "Venta #123465",
     text: "¿Eliminar?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonText: "Sí, eliminar",
     cancelButtonText: "Cancelar",
-  }).then((resultado) => {
-    if (resultado.value) {
-      // Hicieron click en "Sí"
-      console.log("*se elimina la venta*");
-    } else {
-      // Dijeron que no
-      console.log("*NO se elimina la venta*");
-    }
   });
+
+  if (result.value) {
+    await deleteItem(id);
+  }
 };
 
 renderMovies();
