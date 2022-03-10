@@ -51,34 +51,48 @@ btnCrear.onclick = async function (event) {
     return;
   }
 
-  console.log("validacion", validacionInputs);
-
   // para poder crear nuestro elemento en el API necesitamos armar un objeto
   // este objeto sera que el que enviaremos al API para que pueda crear una nueva pelicuala
-  // const movie = {
-  //   name: values.movie_name,
-  //   director: values.movie_director,
-  //   wallpaper: values.movie_photo,
-  //   gender: valueGender,
-  //   video_link: values.movie_video,
-  // };
+  const movie = {
+    name: values.movie_name,
+    director: values.movie_director,
+    wallpaper: values.movie_photo,
+    gender: valueGender,
+    video_link: values.movie_video,
+  };
 
-  // // Ahora vamos a ejecutar una peticion con el motodo POST porque vamos a crear algo
-  // // Sabemos que por default el fetch es de metodo GET
-  // // ahora para cambiarlos a un POST necesitamos pasarle un objeto indicando su METODO
-  // // al decirle que method ahora es POST automaticamente podremos pasarle un body
-  // // body: Es el objeto que vamos a enviar al servidor para que pueda ser creado
-  // // body solo recibe strings
-  // const response = await fetch(URL, {
-  //   method: "POST",
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify(movie),
-  // });
+  // Ahora vamos a ejecutar una peticion con el motodo POST porque vamos a crear algo
+  // Sabemos que por default el fetch es de metodo GET
+  // ahora para cambiarlos a un POST necesitamos pasarle un objeto indicando su METODO
+  // al decirle que method ahora es POST automaticamente podremos pasarle un body
+  // body: Es el objeto que vamos a enviar al servidor para que pueda ser creado
+  // body solo recibe strings
 
-  // const data = await response.json();
+  // Recurden que es recomendable tener un try catch cuando hagamos una peticion
+  try {
+    const response = await fetch(URL, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie),
+    });
 
-  // console.log("data", data);
+    await response.json();
+
+    // Falta limpiar los inputs
+
+    Swal.fire({
+      icon: "success",
+      title: "",
+      text: "Se crear la pelicula",
+    });
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: error.message,
+    });
+  }
 };
