@@ -28,7 +28,6 @@ const storeMovie = async (movie) => {
     });
 
     await response.json();
-
     // Falta limpiar los inputs
     document.querySelector("form").reset();
 
