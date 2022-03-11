@@ -12,7 +12,7 @@ const renderMovies = async () => {
               <td><a target="_blank" href=${movie.video_link}>Ver video</a> </td>
               <td>
                 <div>
-                  <button class="btn btn-warning">
+                  <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalMovie">
                     <i class="fas fa-edit"></i>
                   </button>
                   <button onclick="deleteMoivie(${movie.id})" class="btn btn-danger">
