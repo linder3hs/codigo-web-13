@@ -2,6 +2,10 @@
 
 const tableContainer = document.querySelector("#table-container");
 
+const getDataFromMovie = (movieId) => {
+  console.log(movieId);
+};
+
 const renderMovies = async () => {
   const movies = await getMovies();
   movies.map((movie) => {
@@ -12,7 +16,7 @@ const renderMovies = async () => {
               <td><a target="_blank" href=${movie.video_link}>Ver video</a> </td>
               <td>
                 <div>
-                  <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalMovie">
+                  <button onclick="getDataFromMovie(${movie.id})" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalMovie">
                     <i class="fas fa-edit"></i>
                   </button>
                   <button onclick="deleteMoivie(${movie.id})" class="btn btn-danger">

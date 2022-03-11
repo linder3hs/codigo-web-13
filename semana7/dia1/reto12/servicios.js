@@ -45,6 +45,21 @@ const storeMovie = async (movie) => {
   }
 };
 
+// Sera para poder obtener el detalle de una pelicula
+const getMovieDetail = async (id) => {
+  try {
+    const response = await fetch(`${URL}/${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error",
+      text: error.message,
+    });
+  }
+};
+
 // Para poder eliminas un registro solo necesito el ID de este
 const deleteItem = async (id) => {
   try {
