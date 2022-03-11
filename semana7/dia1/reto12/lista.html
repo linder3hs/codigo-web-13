@@ -58,10 +58,68 @@
               <div class="container">
                 <div class="row">
                   <div class="mt-3">
-                    <input type="text" class="form-control" />
+                    <h3>Editar Pelicula</h3>
+                  </div>
+                  <div class="mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre de le pelicula"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Nombre del director"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <select
+                      id="select-gender"
+                      name="movie_gender"
+                      class="form-select"
+                      id=""
+                    >
+                      <option value="" selected disabled>
+                        Seleccion un genero
+                      </option>
+                      <option value="Marvel">Marvel</option>
+                      <option value="DC">DC</option>
+                      <option value="Pixar">Pixar</option>
+                      <option value="Disney">Disney</option>
+                      <option value="Universal">Universal</option>
+                      <option value="Twentieth century">
+                        Twentieth century
+                      </option>
+                      <option value="Fox">Fox</option>
+                      <option value="Sony">Sony</option>
+                    </select>
+                  </div>
+                  <div class="mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Link de la foto"
+                      name="movie_photo"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Link del video"
+                      name="movie_video"
+                    />
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary">Actualizar</button>
+              <button class="btn btn-danger" data-bs-dismiss="modal">
+                Cancelar
+              </button>
             </div>
           </div>
         </div>
