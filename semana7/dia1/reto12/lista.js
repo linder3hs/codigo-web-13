@@ -2,9 +2,20 @@
 
 const tableContainer = document.querySelector("#table-container");
 
+// inputs del modal
+movieName = document.querySelector(".movie-name");
+movieDirector = document.querySelector(".movie-director");
+movieGender = document.querySelector(".movie-gender");
+moviePhoto = document.querySelector(".movie-photo");
+movieVideo = document.querySelector(".movie-video");
+
 const getDataFromMovie = async (movieId) => {
   const movie = await getMovieDetail(movieId);
-  console.log(movie);
+  movieName.value = movie.name;
+  movieDirector.value = movie.director;
+  movieGender.value = movie.gender;
+  moviePhoto.value = movie.wallpaper;
+  movieVideo.value = movie.video_link;
 };
 
 const renderMovies = async () => {
