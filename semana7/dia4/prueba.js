@@ -1,8 +1,10 @@
-// Este archivo sera la prueba de como poder ejecutar un archivo de JS de la consola/terminal
+// ahora vamos a ver como podemos utilizar la libreria que acabamos de instalar
+// ! La forma antigua en la cual usabamos una libreria es usando require
+// * const format = require("date-format");
+// ! El "nuevo" standart es usando import
+import format from "date-format";
 
-const num1 = 10;
-const num2 = 20;
-
-const suma = num1 + num2;
-
-console.log("La suma es", suma);
+// Luego de importar el format podemos utilizarlo
+const fechaActual = new Date();
+const fechaFormateada = format.asString("dd-MM-yyyy", fechaActual);
+console.log(fechaFormateada);
