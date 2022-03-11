@@ -9,6 +9,7 @@ movieGender = document.querySelector(".movie-gender");
 moviePhoto = document.querySelector(".movie-photo");
 movieVideo = document.querySelector(".movie-video");
 
+//comentario de prueba
 const getDataFromMovie = async (movieId) => {
   const movie = await getMovieDetail(movieId);
   movieName.value = movie.name;
