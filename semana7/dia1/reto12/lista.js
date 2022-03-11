@@ -2,8 +2,9 @@
 
 const tableContainer = document.querySelector("#table-container");
 
-const getDataFromMovie = (movieId) => {
-  console.log(movieId);
+const getDataFromMovie = async (movieId) => {
+  const movie = await getMovieDetail(movieId);
+  console.log(movie);
 };
 
 const renderMovies = async () => {
