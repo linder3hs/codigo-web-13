@@ -1,7 +1,7 @@
 /**
  * Este archivo se va a ecargar de gestionar mi servios GET POST PUT DELETE
  */
-const URL = "https://62281ff09fd6174ca81b97f8.mockapi.io/api/v1/movies";
+const URL = "https://622ab12714ccb950d222bd2f.mockapi.io/api/v1/movies";
 
 /**
  * Funcion para listar las peliculas
