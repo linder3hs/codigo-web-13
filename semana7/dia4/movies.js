@@ -8,6 +8,7 @@ export const arrayMovies = [
     id: 1,
     name: "Batman",
     director: "Robert",
+    gender: "DC",
     wallpaper:
       "https://phantom-marca.unidadeditorial.es/fdd7f8ea00910b1d5df9709c79927cbd/resize/1320/f/jpg/assets/multimedia/imagenes/2022/03/02/16462198562031.jpg",
     video_link:
@@ -17,6 +18,7 @@ export const arrayMovies = [
     id: 2,
     name: "Spiderman no way home",
     director: "Juanito",
+    gender: "Marvel",
     wallpaper:
       "https://as01.epimg.net/meristation/imagenes/2021/12/16/reportajes/1639644481_655591_1640209353_noticia_normal.jpg",
     video_link:
@@ -26,6 +28,7 @@ export const arrayMovies = [
     id: 3,
     name: "Doctor Strange",
     director: "Pepito",
+    gender: "Marvel",
     wallpaper:
       "https://depor.com/resizer/NWCd24ryeuxfcNEkilqcglcpjZM=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/24OXYS4EVBHKTOTLHFKT776XJA.png",
     video_link:
@@ -35,6 +38,7 @@ export const arrayMovies = [
     id: 4,
     name: "Iron man 2",
     director: "Robert",
+    gender: "Marvel",
     wallpaper:
       "https://www.victorsancho.com/wp-content/uploads/2021/08/poster-4.jpg",
     video_link:
