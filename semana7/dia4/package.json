@@ -1,7 +1,7 @@
 {
   "name": "dia4",
   "version": "1.0.0",
-  "description": "NODE project",
+  "description": "NODE Project",
   "main": "prueba.js",
   "type": "module",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "Linder Hassinger",
   "license": "ISC",
   "dependencies": {
-    "date-format": "^4.0.4"
+    "date-format": "^4.0.4",
+    "express": "^4.17.3"
   }
 }
