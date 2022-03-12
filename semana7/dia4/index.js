@@ -44,6 +44,33 @@ app.post("/movies", (req, res) => {
   });
 });
 
+app.put("/movies/:id", (req, res) => {
+  const id = req.params.id;
+  const data = req.body;
+  const movieIndex = arrayMovies.findIndex((movie) => movie.id === +id);
+  // debemos agregarle el id al data
+  data.id = id;
+  // ahora debemos actualizar la informacion de nuestro elemento
+  // y para ellos vamos a buscarlo por su idice
+  // quiero que ahora este objeto tengo que el valor de data
+  // recordemos que data tiene la informacion que envie el cliente
+  // por ende estamos cambiando la info antigua por la nueva
+  arrayMovies[movieIndex] = data;
+  res.json({
+    message: "Todo bien",
+  });
+});
+
+app.delete("/movies/:id", (req, res) => {
+  const id = req.params.id;
+  // retorna un array donde estamos filtrando lo elementos que sean distinto a un id
+  // esto esta modificando la variable ya existente hace un filtro que ignora al id recibimos
+  arrayMovies.filter((movie) => movie.id !== +id);
+  res.json({
+    message: "Todo bien",
+  });
+});
+
 app.listen(3000, () =>
   console.log("Servidor iniciado en http://localhost:3000")
 );
