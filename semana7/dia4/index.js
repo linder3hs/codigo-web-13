@@ -2,10 +2,11 @@
 import express from "express";
 // ahora vamos a importar la variable movies
 // para importar una variable de otro archivo usamos import
+import cors from "cors";
 import { arrayMovies } from "./movies.js";
 
 const app = express();
-
+app.use(cors());
 // para poder crear nuestras rutas
 // para este ejemplo vamos a crear un archivo llamando movies.js
 // donde guardaremos un array de objetos
