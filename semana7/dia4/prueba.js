@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/movies", (req, res) => {
-  res.json({
+  const datos = {
     data: [
       {
         id: 1,
@@ -39,7 +39,9 @@ app.get("/movies", (req, res) => {
         name: "Superman",
       },
     ],
-  });
+  };
+
+  res.json(datos);
 });
 
 // para poder acceder a las ruta de nuestro servidor debemos usar un puerto por
